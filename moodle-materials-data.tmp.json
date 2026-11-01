@@ -1,0 +1,354 @@
+[
+  {
+    "number": 0,
+    "title": "Recursos generales",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20512",
+    "resources": [
+      {
+        "title": "Avisos",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119037",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Foro de Novedades",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119039",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Foro de Consultas",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119040",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Foro de Presentación",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119041",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Foro de Recreo",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119042",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Bibliotecas Virtuales",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=119044",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Biblioteca de la UNIBE",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=119045",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Tutorial de ingreso a la Plataforma",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=119047",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Estructura y Organización de las Clases",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=119048",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Edición del Perfil",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=119049",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Introducción a la contabilidad",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20513",
+    "resources": [
+      {
+        "title": "La Contabilidad",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154549",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "la contabilidad",
+        "url": "https://ad.unibe.edu.py/virtual/mod/resource/view.php?id=160586",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Estados financieros",
+        "url": "https://ad.unibe.edu.py/virtual/mod/resource/view.php?id=154291",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La importancia de la contabilidad en una empresa",
+        "url": "https://www.youtube.com/watch?v=Oueop0T5QUE",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "La empresa",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20514",
+    "resources": [
+      {
+        "title": "bienes",
+        "url": "https://es.wikipedia.org/wiki/Bien_econ%C3%B3mico",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "servicios",
+        "url": "https://es.wikipedia.org/wiki/Servicio_(econom%C3%ADa)",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La Empresa",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=154540",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La empresa",
+        "url": "https://www.youtube.com/watch?v=l-bNSIWpGx4",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Formalización de empresas",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20515",
+    "resources": [
+      {
+        "title": "la empresa",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=153570",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La Formalización de las Empresas",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154542",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "El Sistema Comercial",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154547",
+        "type": "Enlace",
+        "status": "Acceso restringido comprobado: el PDF de destino remite a Taller de Casos I y requiere matrícula."
+      },
+      {
+        "title": "Razones para formalizar tu emprendimiento",
+        "url": "https://www.youtube.com/watch?v=ahhnrQK-_bw",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Contabilidad y gestión",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20516",
+    "resources": [
+      {
+        "title": "La Contabilidad",
+        "url": "https://virtual.unibe.edu.py/mod/url/view.php?id=171304",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "LA CONTABILIDAD : Evolucion",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=155138",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La Contabilidad",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154549",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Tarea Nº 1",
+        "url": "https://ad.unibe.edu.py/mod/assign/view.php?id=119069",
+        "type": "Actividad",
+        "status": "Consigna DOCX leída el 1 de noviembre de 2026."
+      },
+      {
+        "title": "Contabilidad: evolución",
+        "url": "https://www.youtube.com/watch?v=6rCvQRYccWA",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Administración",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20518",
+    "resources": [
+      {
+        "title": "La Administracion",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=162387",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La administración y su importancia",
+        "url": "https://www.youtube.com/watch?v=kL4h2vfZTWw",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Repaso de clases",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20519",
+    "resources": []
+  },
+  {
+    "number": 7,
+    "title": "Informática e información contable",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20521",
+    "resources": [
+      {
+        "title": "la contabilidad",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154549",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "la empresa",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=154540",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La irrupción de la Informática en la información Contable",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=162389",
+        "type": "Enlace",
+        "status": "Acceso restringido comprobado: el PDF de destino remite a Informática Aplicada a la Contabilidad y requiere matrícula."
+      },
+      {
+        "title": "Tarea 2",
+        "url": "https://ad.unibe.edu.py/mod/assign/view.php?id=162391",
+        "type": "Actividad",
+        "status": "Consigna DOCX leída el 1 de noviembre de 2026."
+      },
+      {
+        "title": "Importancia del software contable",
+        "url": "https://www.youtube.com/watch?v=uvLAqgwhREo",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Casos prácticos de sistemas contables",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20522",
+    "resources": [
+      {
+        "title": "Creación o configuración de la empresa",
+        "url": "https://www.youtube.com/watch?v=88NfItgDX6s",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      },
+      {
+        "title": "Plan de cuentas",
+        "url": "https://www.youtube.com/watch?v=ddN9fDMoNWk",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      },
+      {
+        "title": "Cómo emitir facturas virtuales a través de Marangatu",
+        "url": "https://www.youtube.com/watch?v=oZfOh5iTVTI",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      },
+      {
+        "title": "Banco Continental: aplicación explicativa",
+        "url": "https://www.youtube.com/watch?v=NDXHd3oUzNU",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Trabajo académico de investigación",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20524",
+    "resources": [
+      {
+        "title": "EL SOFTWARE CONTABLE",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=162766",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Guia para la Elaboración del Trabajo de Investigación",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=162392",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Formato del Trabajo Academico",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=162393",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "ALZAR AQUI EL TRABAJO ACADÉMICO TERMINADO",
+        "url": "https://ad.unibe.edu.py/mod/assign/view.php?id=162395",
+        "type": "Actividad",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Software contable",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20525",
+    "resources": [
+      {
+        "title": "la contabilidad",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154549",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "El Software Contable",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=162766",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Software contable",
+        "url": "https://www.youtube.com/watch?v=5PrREqQZVPU",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Repaso y parcial ordinario",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20526",
+    "resources": []
+  }
+]

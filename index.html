@@ -2,48 +2,215 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090d16">
-<title>REPASO // Contabilidad UNIBE</title>
+<title>Contabilidad UNIBE · Repaso</title>
+<!-- Lucide SVG icons: https://lucide.dev
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+-->
 <style>
-:root{color-scheme:dark;--bg:#090d16;--side:#0d121e;--panel:#111827;--panel2:#151e2e;--line:#263147;--text:#f2f5ff;--muted:#8e9cb5;--a:#817afa;--a2:#ae93ff;--green:#3ee0b3;--red:#fd7a95;--amber:#f2bd6a;--shadow:0 25px 65px rgba(0,0,0,.17)}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% -20%,rgba(104,70,180,.17),transparent 38%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;font-size:14px;line-height:1.55}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}a{color:inherit}.layout{min-height:100vh;display:grid;grid-template-columns:252px minmax(0,1fr)}.sidebar{position:sticky;top:0;height:100vh;border-right:1px solid var(--line);padding:29px 16px;display:flex;flex-direction:column;gap:25px;background:rgba(10,15,25,.92)}.brand{display:flex;align-items:center;gap:11px;padding:0 11px}.brandicon{width:41px;height:41px;border-radius:13px;display:grid;place-items:center;font-size:21px;background:linear-gradient(135deg,#5953d2,#b05ed5);box-shadow:0 10px 24px #5545ad40}.brand strong{font-weight:850;letter-spacing:1.7px;font-size:15px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1px}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-weight:750}.nav-group{padding:0 9px}.nav-list{display:flex;flex-direction:column;gap:4px}.nav{width:100%;display:flex;align-items:center;gap:12px;padding:12px 13px;border:1px solid transparent;background:transparent;color:var(--muted);border-radius:10px;text-align:left;font-weight:650;transition:.15s}.nav svg{flex:none}.nav:hover{background:#172032;color:#fff}.nav.active{background:#211e3d;color:#b6adff;border-color:#4b4275}.nav .navcount{margin-left:auto;font-size:11px;background:#273147;border-radius:6px;padding:1px 6px}.bottom{margin-top:auto;padding:15px;border-radius:13px;background:linear-gradient(135deg,#201c42,#142439);border:1px solid #3f3b61}.bottom p{color:#a5b1c9;font-size:12px;margin:8px 0 0}.main{min-width:0;max-width:1320px;width:100%;margin:0 auto;padding:32px 46px 70px}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:28px}.breadcrumb{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#818ea7;font-weight:800}.topright{display:flex;gap:10px;align-items:center}.chip{border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--muted);font-size:12px}.chip i{width:7px;height:7px;border-radius:100%;display:inline-block;background:var(--green);margin-right:7px}.btn{border:1px solid var(--line);background:#1a2335;color:var(--text);border-radius:11px;padding:11px 17px;font-weight:750;display:inline-flex;justify-content:center;align-items:center;gap:9px;transition:.15s}.btn:hover:not(:disabled){transform:translateY(-1px);border-color:#726cac}.btn.primary{background:linear-gradient(135deg,#7168ee,#9b72e8);border-color:transparent;color:white;box-shadow:0 9px 23px #796df12f}.btn.ghost{background:transparent}.btn.small{padding:8px 12px;font-size:12px}.hero{border:1px solid #37325c;border-radius:20px;padding:34px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:radial-gradient(ellipse at 89% 20%,#4c368a85,transparent 44%),linear-gradient(120deg,#191b39,#15182a 65%);min-height:210px;overflow:hidden}.hero h1{font-size:clamp(28px,3.2vw,44px);line-height:1.17;letter-spacing:-1.5px;margin:10px 0}.hero p{margin:0;color:#b7c0d5;max-width:540px}.herovisual{width:152px;height:152px;display:grid;place-items:center;flex:none;border:1px solid #7d6dd87a;transform:rotate(12deg);border-radius:30px;background:#826bd51a;box-shadow:0 0 0 17px #8577d20c,0 0 0 34px #7d6dd809}.herovisual span{font-size:64px;transform:rotate(-12deg);font-weight:850;color:#bbb1ff}.sectionline{display:flex;justify-content:space-between;align-items:center;margin:31px 0 15px;gap:12px}.sectionline h2{font-size:18px;letter-spacing:-.3px;margin:0}.muted{color:var(--muted)}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.metric{border:1px solid var(--line);background:var(--panel);border-radius:15px;padding:20px}.metric .value{font-size:29px;letter-spacing:-1px;font-weight:850;margin:5px 0}.metric .sub{font-size:12px;color:var(--muted)}.metric .head{display:flex;align-items:center;gap:8px;color:#adb7cb;font-size:12px}.metric .head svg{color:var(--a2)}.topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.topic{padding:21px;border:1px solid var(--line);background:var(--panel);border-radius:15px;display:flex;gap:15px;align-items:center;text-align:left;color:var(--text);width:100%}.topic:hover{border-color:#7470bc;background:#181d31}.topic-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;font-weight:900;font-size:19px;flex:none}.topic strong{font-size:14px}.topic p{font-size:12px;color:var(--muted);margin:2px 0}.topic .arrow{margin-left:auto;color:#8090a9}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px}.progress{height:8px;border-radius:12px;background:#30354a;overflow:hidden}.progress>div{height:100%;background:linear-gradient(90deg,#7266e8,#b28af7);border-radius:inherit;transition:.2s}.pill{display:inline-flex;font-size:11px;border-radius:6px;background:#262443;color:#c1b4ff;padding:4px 8px;font-weight:800}.tag{border:1px solid var(--line);background:#151e2e;color:#adbbd0;border-radius:8px;padding:7px 11px;font-size:12px;font-weight:650}.tag.on{border-color:#7369d3;background:#262343;color:#d7d0ff}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0}.space{height:14px}.note{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:12px}.note h3{margin:0 0 8px;font-size:15px}.note p{margin:0;color:#b2bed2;line-height:1.77}.source{color:#8798b4;font-size:11px}.question{font-size:clamp(20px,2.3vw,28px);line-height:1.35;letter-spacing:-.5px;margin:15px 0 23px}.answer{width:100%;text-align:left;border:1px solid #303a50;border-radius:12px;background:#161e2d;color:#dfe7f8;padding:15px;display:flex;gap:13px;align-items:center;margin:9px 0;transition:.15s}.answer:hover:not(:disabled){border-color:#7771b4;background:#1c2540}.answer.selected{border-color:#9b8dff;background:#242244}.answer.correct{background:#15382f;border-color:#38b997}.answer.wrong{background:#3b202c;border-color:#d46c80}.letter{display:inline-grid;place-items:center;flex:none;width:29px;height:29px;border-radius:8px;background:#303a50;font-size:12px;font-weight:800}.feedback{padding:15px;border-radius:12px;background:#142e2d;border:1px solid #285c51;margin-top:15px}.feedback.bad{background:#36222b;border-color:#70424f}.feedback p{margin:5px 0 0;color:#c7d4dc}.footer-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-top:22px}.select{border:1px solid var(--line);background:#192235;color:var(--text);border-radius:10px;padding:11px 13px;min-width:170px}.face{min-height:250px;border-radius:15px;border:1px solid #4d4b7c;background:radial-gradient(circle at 90% 15%,#493a8f70,transparent 46%),linear-gradient(145deg,#242345,#171c32);width:100%;color:white;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;cursor:pointer}.face:hover{border-color:#a29af9}.face h2{font-size:clamp(23px,3vw,32px);margin:8px 0}.face p{font-size:15px;max-width:510px;color:#d0d5ed}.empty{text-align:center;padding:45px 20px;color:var(--muted)}.results{font-size:52px;font-weight:900;line-height:1.1;letter-spacing:-3px}.search{width:100%;padding:11px 15px;border:1px solid var(--line);border-radius:10px;background:#151d2c;color:var(--text)}.listrow{padding:14px 0;border-bottom:1px solid var(--line)}.listrow:last-child{border-bottom:0}.hint{padding:12px 14px;color:#b5c1d7;border-radius:11px;border:1px solid #3f3b65;background:#211f37;font-size:12px}.hidden{display:none!important}.mobiletop{display:none}.examtime{font-variant-numeric:tabular-nums;color:var(--amber);font-weight:800}.kv{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px solid var(--line)}.kv:last-child{border:0}.smalltext{font-size:12px}.notice{font-size:12px;color:#9cabc4;margin-top:14px}@media(max-width:1050px){.layout{grid-template-columns:210px minmax(0,1fr)}.main{padding:25px}.sidebar{padding:24px 10px}.columns{grid-template-columns:1fr}}@media(max-width:760px){.layout{display:block}.sidebar{position:static;height:auto;padding:14px 17px;gap:13px;border-bottom:1px solid var(--line)}.brand{padding:0}.sidebar .nav-group,.sidebar .bottom{display:none}.mobiletop{display:block}.main{padding:20px 16px 55px}.hero{padding:23px;min-height:170px}.herovisual{display:none}.grid3{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.metric{padding:13px}.metric .value{font-size:23px}.metric .head{font-size:10px}.topics{grid-template-columns:1fr}.top{margin-bottom:18px}.topright .chip{display:none}.panel{padding:17px}.grid2{grid-template-columns:1fr}.mobiletop select{width:100%}}@media(max-width:380px){.grid3{grid-template-columns:1fr}.metric{padding:16px}.hero h1{font-size:28px}}
-textarea{font:inherit;resize:vertical;min-height:110px}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--a2);outline-offset:3px}.sidebar{overflow-y:auto}.footer-actions>div{flex-wrap:wrap}.note,.panel{overflow-wrap:anywhere}@media(max-width:760px){.footer-actions{align-items:stretch}.footer-actions>div{display:flex;gap:8px}.footer-actions .btn{padding:10px 12px}}
+/* Sistema editorial: superficies planas, escala de 4 px, un solo acento. */
+:root {
+  color-scheme: dark;
+  --bg:#181b1a; --side:#141716; --panel:#1e2220; --panel2:#252a27;
+  --line:#353d38; --text:#eeeee7; --muted:#a8b2aa; --a:#a8c5ae; --a2:#bdd5c1;
+  --green:#a8ceb2; --red:#eeaba5; --amber:#dfc393; --accent-bg:#2b3830;
+  --button-text:#18241c; --correct-bg:#24372b; --wrong-bg:#3b2928;
+  --font:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --editorial:Georgia,'Times New Roman',serif;
+}
+:root[data-theme="light"] {
+  color-scheme:light;
+  --bg:#f7f5ee; --side:#eeece4; --panel:#fffdf7; --panel2:#eae8df;
+  --line:#d5d6cc; --text:#262e28; --muted:#5e685f; --a:#355d42; --a2:#355d42;
+  --green:#30613d; --red:#a23831; --amber:#78541d; --accent-bg:#e2eade;
+  --button-text:#fffdf7; --correct-bg:#e6eee1; --wrong-bg:#f5e5df;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 var(--font);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}
+a{color:inherit}svg{flex-shrink:0;vertical-align:middle}button,input,textarea,select,summary{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--a);outline-offset:4px}::selection{background:var(--accent-bg);color:var(--text)}
+.skip-link{position:fixed;top:-80px;left:20px;padding:12px;background:var(--a);color:var(--button-text);z-index:100}.skip-link:focus{top:12px}
+.layout{min-height:100vh;display:grid;grid-template-columns:224px minmax(0,1fr)}
+.sidebar{position:sticky;top:0;height:100vh;padding:32px 20px 22px;display:flex;flex-direction:column;gap:36px;background:var(--side);border-right:1px solid var(--line);overflow-y:auto}
+.brand{display:flex;gap:12px;align-items:center;text-decoration:none}.brandicon{color:var(--a);width:30px;height:34px;display:grid;place-items:center}.brand strong{font-size:15px;letter-spacing:-.3px;font-weight:650}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.08em}
+.eyebrow,.nav-heading{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.nav-heading{display:block;padding:20px 10px 8px;letter-spacing:.07em;font-size:10px}.nav-heading:first-child{padding-top:0}
+.nav-group{padding:0}.nav-group>.eyebrow{display:none}.nav-list{display:flex;flex-direction:column;gap:3px}
+.nav{display:flex;align-items:center;gap:11px;border:0;border-radius:5px;background:transparent;color:var(--muted);width:100%;text-align:left;padding:10px;font-size:13px;font-weight:500;min-height:42px}
+.nav:hover{color:var(--text);background:var(--panel2)}.nav.active{background:var(--accent-bg);color:var(--a2)}.navcount{margin-left:auto;font-variant-numeric:tabular-nums;font-size:11px}
+.bottom{margin-top:auto;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:12px}.bottom p{margin:4px 0}.bottom strong{color:var(--text);font-weight:500}
+.main{min-width:0;width:100%;max-width:1240px;margin:0 auto;padding:26px clamp(24px,5vw,76px) 72px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:40px;margin-bottom:48px}.breadcrumb{font-size:12px;color:var(--muted)}.topright{display:flex;gap:14px;align-items:center}.chip{font-size:11px;color:var(--muted)}.chip i{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:10px 17px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text);font-weight:550;font-size:13px;line-height:1.4;transition:background .12s,border-color .12s}
+.btn:hover:not(:disabled){background:var(--panel2);border-color:var(--muted)}.btn.primary{background:var(--a);border-color:var(--a);color:var(--button-text)}.btn.primary:hover:not(:disabled){background:var(--a2);border-color:var(--a2)}.btn.ghost{background:transparent;border-color:transparent;color:var(--muted)}.btn.ghost:hover{color:var(--text)}.btn.small{min-height:40px;padding:8px 11px;font-size:12px}
+.theme-button{width:40px;padding:8px}.theme-button svg{width:17px;height:17px}#resetAll{font-size:11px;padding:8px 0;min-height:36px}.study-nav-toggle{display:none}
+h1,h2,h3,p{overflow-wrap:anywhere}h1,h2,h3{color:var(--text)}h1{font:400 clamp(34px,4vw,48px)/1.15 var(--editorial);letter-spacing:-1.2px;margin:10px 0 16px}h2{font-size:19px;font-weight:550;letter-spacing:-.3px;line-height:1.4}h3{font-size:17px;font-weight:550;line-height:1.5}
+.page-header{margin-bottom:34px;max-width:760px}.page-header p{max-width:660px;margin:0;color:var(--muted)}
+.welcome{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;padding:12px 0 36px}.welcome h1{font-size:clamp(40px,4.5vw,62px);max-width:660px;margin:16px 0 20px}.welcome .intro{max-width:490px;color:var(--muted);margin:0;font-size:15px}.welcome-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.course-index{padding-top:6px;color:var(--muted);font-size:11px;white-space:nowrap}.course-index span{display:block}
+.sectionline{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;margin:36px 0 18px}.sectionline h2{margin:0;font-size:17px}.source,.notice{font-size:12px;line-height:1.65;color:var(--muted)}.notice{margin-top:24px}.muted{color:var(--muted)}.smalltext{font-size:13px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.metric{padding:20px 24px 22px 0}.metric+.metric{padding-left:24px;border-left:1px solid var(--line)}.metric .head{font-size:12px;color:var(--muted)}.metric .head svg{display:none}.metric .value{font-size:32px;font-weight:450;letter-spacing:-1px;line-height:1.4;margin:8px 0}.metric .value span{font-size:14px!important;color:var(--muted)!important}.metric .sub{font-size:11px;color:var(--muted)}.metric .progress{margin-top:10px}
+.home-columns{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:52px;margin-top:36px}.home-columns .sectionline{margin-top:0}.topics{display:flex;flex-direction:column}.topic{display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);padding:20px 0;color:var(--text)}.topic:hover{background:var(--panel)}.topic-icon{width:26px;color:var(--muted)!important;background:transparent!important;font-size:12px;font-variant-numeric:tabular-nums;font-weight:500;flex-shrink:0}.topic strong{font-size:15px;font-weight:550}.topic p{color:var(--muted);font-size:12px;margin:3px 0 0}.topic .arrow{margin-left:auto;color:var(--muted)}
+.study-link{display:flex;align-items:flex-start;gap:12px;width:100%;padding:17px 0;text-align:left;color:var(--text);border:0;border-bottom:1px solid var(--line);background:transparent}.study-link:hover{color:var(--a)}.study-link>svg{margin-top:4px;width:18px}.study-link strong{font-size:13px;font-weight:550;display:block}.study-link small{font-size:12px;color:var(--muted);display:block;margin-top:4px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.panel{padding:24px 0;border-top:1px solid var(--line);background:transparent;min-width:0;overflow-wrap:anywhere}.columns{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:48px}.columns>.panel:last-child{font-size:13px}.columns>.panel:last-child .notice{font-size:12px}
+.progress{height:3px;background:var(--line);overflow:hidden;border-radius:0}.progress>div{height:100%;background:var(--a);transition:width .15s}
+.pill{display:inline-flex;font-size:11px;font-weight:550;letter-spacing:.02em;color:var(--a2);background:transparent;border:0;padding:0;border-radius:0}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0}.tag{padding:8px 12px;min-height:40px;border:1px solid transparent;border-radius:4px;color:var(--muted);background:transparent;font-size:12px;line-height:1.4}.tag:hover{background:var(--panel2);color:var(--text)}.tag.on{background:var(--accent-bg);color:var(--a2);border-color:transparent}.space{height:16px}
+.select,.search{padding:12px 14px;min-height:46px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:5px;max-width:100%}.select{min-width:160px}.search{width:100%}.search::placeholder{color:var(--muted)}textarea.search{font-size:15px;line-height:1.8;resize:vertical;min-height:128px;margin:8px 0 16px}
+.note{padding:26px 0;border-bottom:1px solid var(--line);margin:0;background:transparent;max-width:800px;overflow-wrap:anywhere}.note h3{margin:0 0 12px}.note p{color:var(--text);line-height:1.9;margin:8px 0;max-width:72ch}.note .source{max-width:82ch;margin-top:16px}.note .eyebrow{font-size:11px}.note label.source{color:var(--muted)}#notes>.sectionline{margin-top:44px}#notes .note:last-child{border-bottom:0}
+.question{font:400 clamp(25px,2.7vw,34px)/1.4 var(--editorial);letter-spacing:-.5px;margin:32px 0;max-width:29em;scroll-margin-top:32px}
+.answer{display:flex;align-items:center;gap:16px;width:100%;margin:10px 0;padding:17px 18px;text-align:left;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:5px;font-size:15px;line-height:1.6;transition:background .12s,border-color .12s}
+.answer:hover:not(:disabled){background:var(--panel);border-color:var(--muted)}.answer.selected{background:var(--accent-bg);border-color:var(--a)}.answer.correct{background:var(--correct-bg);border-color:var(--green)}.answer.wrong{background:var(--wrong-bg);border-color:var(--red)}.answer:disabled{opacity:1}.answer:disabled:not(.correct):not(.wrong){color:var(--muted)}.letter{flex:none;display:grid;place-items:center;width:27px;height:27px;border:1px solid var(--line);border-radius:4px;font-size:11px;background:transparent;color:var(--muted)}.answer.selected .letter{border-color:var(--a);color:var(--a2)}
+.feedback{padding:20px 22px;background:var(--correct-bg);border:0;border-left:3px solid var(--green);border-radius:0;margin:24px 0}.feedback.bad{background:var(--wrong-bg);border-color:var(--red)}.feedback b{font-size:14px;font-weight:600}.feedback p{color:var(--text);line-height:1.85;margin:8px 0}.feedback .source{color:var(--muted);font-size:12px}.feedback ul{padding-left:22px}.feedback label{display:block;font-size:14px;margin-top:18px}.feedback input{accent-color:var(--a);width:17px;height:17px;vertical-align:middle;margin-right:8px}
+.footer-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px;margin-top:28px}.footer-actions>div{display:flex;flex-wrap:wrap;gap:8px}
+.face{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:340px;width:100%;padding:40px 28px;border:1px solid var(--line);border-radius:4px;background:var(--panel);color:var(--text);text-align:center}.face:hover{border-color:var(--muted)}.face h2{font:400 clamp(30px,4vw,42px)/1.3 var(--editorial);margin:12px 0}.face p{font-size:19px!important;line-height:1.8;max-width:570px;color:var(--text)!important}.face .eyebrow,.face>span:last-child{color:var(--muted)!important}
+.empty{padding:64px 24px;text-align:center;max-width:600px;margin:0 auto}.empty>svg{color:var(--a)}.empty h2{font:400 30px/1.3 var(--editorial)}.empty p{color:var(--muted)}.results{font:400 76px/1.2 var(--editorial);letter-spacing:-3px;margin:20px 0}.listrow{padding:20px 0;border-bottom:1px solid var(--line)}.listrow b{font-size:15px;font-weight:500}.listrow .source{margin-top:6px}
+.hint{border:0;border-left:2px solid var(--line);border-radius:0;padding:12px 18px;background:transparent;color:var(--muted);font-size:13px;line-height:1.8}.kv{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}.kv:last-child{border-bottom:0}.kv b{font-weight:550}.examtime{font-size:14px;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:550}.hidden{display:none!important}.mobiletop{display:none}
+.session-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 0 20px;margin-bottom:28px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.session-bar strong{color:var(--text);font-weight:500}.session-bar .session-actions{display:flex;align-items:center;flex-wrap:wrap;gap:4px}.session-bar .btn{font-size:12px;min-height:38px}.session-bar details{position:relative}.session-bar summary{list-style:none;cursor:pointer;padding:8px 12px;min-height:40px;display:flex;align-items:center;gap:8px}.session-bar summary::-webkit-details-marker{display:none}.session-menu{position:absolute;right:0;top:44px;z-index:10;min-width:220px;padding:12px;border:1px solid var(--line);background:var(--panel);border-radius:5px}.session-menu .btn{width:100%;justify-content:flex-start}.session-menu p{font-size:12px;padding:0 10px}
+.study-focus .layout{display:block}.study-focus .sidebar{display:none}.study-focus .main{max-width:1040px}.study-focus .top{margin-bottom:16px}.study-focus .chip,.study-focus #resetAll{display:none}.study-focus .study-nav-toggle{display:inline-flex}.study-focus.nav-open .sidebar{display:flex;position:fixed;left:0;top:0;width:224px;z-index:20;box-shadow:0 0 0 100vmax #0008}.study-focus.nav-open .sidebar .nav-group{display:block}.study-focus .mobiletop{display:none}.study-focus .page-header{display:none}.study-focus #root{max-width:760px;margin:0 auto}.study-focus .columns{display:block}.study-focus .columns>.panel:first-child{border:0;padding:0}.study-focus .columns>.panel:last-child{margin-top:24px;padding:0;border:0}.study-focus .columns>.panel:last-child>details{padding:16px 0;border-top:1px solid var(--line)}.study-focus .columns>.panel:last-child summary{cursor:pointer;min-height:44px;color:var(--muted);font-size:12px}.study-focus .columns>.panel:last-child .detail-body{max-width:500px;padding:4px 0 16px}.study-focus .hint:not(.session-bar){margin-bottom:18px}
+.study-focus [data-examjump][data-answered="true"]{background:var(--accent-bg)!important;color:var(--a2)}.study-focus [data-examjump]{background:transparent!important;border:1px solid var(--line)}.study-focus [data-examjump].on{border-color:var(--a);color:var(--a2)}
+body[data-screen="dashboard"] #root>.grid2{gap:8px 36px}body[data-screen="dashboard"] .panel>.pill{font:400 24px var(--editorial);color:var(--text)}body[data-screen="dashboard"] .hint{margin-top:20px;font-size:12px}body[data-screen="desarrollo"] .note{padding:32px 0 36px}body[data-screen="desarrollo"] .note>h3{font:400 25px/1.4 var(--editorial)}
+@media(min-width:1500px){.main{padding-top:32px}.welcome{padding-top:32px}}
+@media(max-width:1100px){.layout{grid-template-columns:204px minmax(0,1fr)}.sidebar{padding:28px 14px}.main{padding-left:32px;padding-right:32px}.home-columns{gap:32px;grid-template-columns:minmax(0,1fr) 200px}.columns{grid-template-columns:1fr;gap:16px}.course-index{display:none}}
+@media(max-width:760px){.layout{display:block}.sidebar{position:static;height:auto;display:block;padding:20px;border-right:0;border-bottom:1px solid var(--line)}.sidebar .nav-group,.sidebar .bottom{display:none}.main{padding:16px 20px 48px}.top{margin-bottom:24px}.breadcrumb{font-size:11px}.topright{gap:8px}.chip{display:none}#resetAll{font-size:10px}.mobiletop{display:block;position:relative;margin-bottom:28px!important}.mobiletop .select{width:100%;font-size:14px}.mobiletop::before{content:'Sección';position:absolute;top:12px;left:14px;color:var(--muted);font-size:12px;pointer-events:none}.mobiletop select{padding-left:84px}.welcome{padding:0 0 30px}.welcome h1{font-size:42px;letter-spacing:-1px}.welcome .intro{font-size:14px}.welcome-actions{gap:8px;margin-top:24px}.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}.metric{padding:18px 10px 18px 0}.metric+.metric{padding-left:12px}.metric .head{font-size:11px}.metric .value{font-size:27px}.metric .value span{font-size:11px!important}.metric .sub{font-size:10px;line-height:1.6}.home-columns{grid-template-columns:1fr;gap:32px;margin-top:32px}.study-link{padding:16px 0}.topic{gap:12px;padding:18px 0}.topic p{font-size:11px}.grid2{grid-template-columns:1fr;gap:0}.page-header{margin-bottom:28px}h1{font-size:36px}.toolbar{gap:2px}.tag{padding:9px 10px;min-height:44px;font-size:12px}.panel{padding:20px 0}.note{padding:24px 0}.note p{font-size:15px;line-height:1.85}.source{font-size:11px}.question{font-size:27px;margin:26px 0;line-height:1.4}.answer{padding:15px 13px;gap:12px;font-size:14px;min-height:60px}.feedback{padding:18px 16px}.footer-actions{gap:8px;padding-top:20px}.footer-actions .btn{padding:10px 12px;font-size:12px}.face{min-height:310px;padding:30px 20px}.face h2{font-size:32px}.face p{font-size:17px!important}.session-bar{gap:8px;margin-bottom:20px;padding-bottom:14px}.session-bar .btn{padding:8px}.study-focus .top{margin-bottom:20px}.study-focus .main{padding-top:16px}.study-focus .breadcrumb{display:none}.study-focus .topright{margin-left:auto}.study-focus.nav-open .sidebar .nav-group{margin-top:28px}.study-focus.nav-open .sidebar .bottom{display:block}.results{font-size:64px}.hint{font-size:12px}.kv{flex-wrap:wrap}.empty{padding:40px 0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+.round-context{font-size:11px;color:var(--muted);margin:0 0 20px;letter-spacing:.02em}
 </style></head>
-<body><div class="layout">
-<aside class="sidebar"><div class="brand"><div class="brandicon">◈</div><div><strong>REPASO<span style="color:#ae9aff">//</span></strong><small>CONTABILIDAD · UNIBE</small></div></div><div class="nav-group"><div class="eyebrow" style="margin:0 12px 12px">Espacio de estudio</div><div class="nav-list" id="nav"></div></div><div class="bottom"><div class="eyebrow" style="color:#c7b9ff">Enfoque de hoy</div><b style="font-size:13px;display:block;margin-top:6px">Primero comprender. Luego practicar.</b><p>Repetí los errores hasta dominar cada tema. Tu progreso queda en este navegador.</p></div></aside>
-<main class="main"><div class="top"><div class="breadcrumb" id="breadcrumb">ESTUDIO / INICIO</div><div class="topright"><div class="chip"><i></i> Funciona sin conexión</div><button class="btn small ghost" id="resetAll" title="Borrar el progreso guardado">Reiniciar progreso</button></div></div><div class="mobiletop" style="margin-bottom:16px"><select class="select" id="mobileNav" aria-label="Navegación"></select></div><div id="root"></div></main></div>
+<body><a href="#root" class="skip-link">Saltar al contenido</a><div class="layout">
+<aside class="sidebar"><div class="brand"><div class="brandicon">◈</div><div><strong>Cuaderno de repaso</strong><small>CONTABILIDAD · UNIBE</small></div></div><div class="nav-group"><div class="eyebrow" style="margin:0 12px 12px">Espacio de estudio</div><div class="nav-list" id="nav" role="navigation" aria-label="Secciones de estudio"></div></div><div class="bottom"><strong>Guardado en este dispositivo</strong><p>Tu progreso queda en este navegador.</p></div></aside>
+<main class="main"><div class="top"><div class="breadcrumb" id="breadcrumb">ESTUDIO / INICIO</div><button class="btn ghost small study-nav-toggle" id="studyNav" aria-label="Abrir navegación" aria-expanded="false" aria-controls="nav"></button><div class="topright"><button class="btn ghost theme-button" id="themeToggle" aria-label="Activar modo claro"></button><div class="chip"><i></i> Funciona sin conexión</div><button class="btn small ghost" id="resetAll" title="Borrar el progreso guardado">Reiniciar progreso</button></div></div><div class="mobiletop" style="margin-bottom:16px"><select class="select" id="mobileNav" aria-label="Navegación"></select></div><div id="root" tabindex="-1"></div></main></div>
 <script>
 const TOPICS=[{"id":"empresa","name":"La empresa","short":"Origen, evolución y concepto","accent":"#7c83ff","source":"La Empresa.docx","sections":[["Concepto y propósito","Una empresa es una organización dedicada a producir bienes o prestar servicios demandados por consumidores. Busca satisfacer necesidades y, según el material, obtener un beneficio económico. Para funcionar necesita misión, objetivos, estrategia, políticas y planificación."],["Evolución histórica","Primitiva: caza, pesca y recolección con división del trabajo por edad y sexo. Grandes civilizaciones: control del trabajo y organización de recursos, como en Egipto. Grecolatina: esclavismo y supervisión. Edad Media: feudalismo, talleres artesanales y gremios. Edad Moderna: trabajo asalariado y capitalismo comercial. Revolución Industrial: mecanización, grandes fábricas y producción en serie. Siglo XX: consolidación de la administración. Siglo XXI: globalización, automatización, calidad y orientación al cliente."],["Qué recordar","Los talleres medievales son antecedentes de la empresa y los gremios de sindicatos actuales. La Revolución Industrial expandió las fábricas y transformó los procesos productivos. Una empresa puede adoptar distintas formas jurídicas y desarrollar una actividad económica."]]},{"id":"admin","name":"Administración","short":"Conceptos y características","accent":"#b18cff","source":"Origen y desarrollo de la administración (PDF)","sections":[["Definiciones de autores","Para Henri Fayol, administrar implica prever, organizar, dirigir, coordinar y controlar. José Antonio Fernández Arena pone el foco en objetivos institucionales mediante esfuerzo humano coordinado. Agustín Reyes Ponce la vincula con la máxima eficiencia en la estructura y manejo de un organismo social. George R. Terry habla de planeación, organización, ejecución y control."],["Cuatro características","Universalidad: existe donde hay organismos sociales. Especificidad: se distingue de fenómenos contables, productivos o jurídicos. Unidad temporal: sus fases coexisten en la práctica. Unidad jerárquica: distintos niveles de jefatura forman un mismo cuerpo administrativo."],["Por qué importa","Coordina recursos humanos y materiales, eleva productividad y contribuye a la eficacia. En grandes organizaciones es indispensable por su complejidad; en pequeñas y medianas puede mejorar su capacidad de competir. La administración pública se enfoca en organismos de orden público y la privada en los de tipo privado."]]},{"id":"formalizacion","name":"Formalización","short":"Economía formal y OIT","accent":"#46c8ae","source":"La formalización de las empresas, OIT (PDF)","sections":[["Definición","La formalización consiste en la incorporación gradual de empresas a la economía formal. Incluye registro y licencias, seguridad social y cumplimiento de normas tributarias y laborales. No necesariamente ocurre todo de una sola vez."],["Objetivos y beneficios","La OIT promueve crear más y mejores empleos, reducir pobreza y vulnerabilidad y mejorar condiciones de trabajo. Para una empresa, formalizarse puede facilitar financiación, acceso a mercados y licitaciones, y reducir la exposición a sanciones. Para la sociedad, puede ampliar ingresos fiscales y favorecer la competencia leal."],["Medidas e intervención","Simplificar trámites y costos, ofrecer incentivos y acceso a servicios, mejorar productividad y capacitación, promover diálogo y cumplimiento legal. El documento menciona la Recomendación núm. 204 de la OIT y la meta ODS 8.3."]]},{"id":"contabilidad","name":"Contabilidad y gestión","short":"Información para decidir","accent":"#f0bd67","source":"Tarea Nº 1 — Importancia de la Contabilidad.docx","sections":[["Papel de la contabilidad","Registra, clasifica y resume sistemáticamente las operaciones económicas para producir información confiable, oportuna y verificable de la situación patrimonial y los resultados de la empresa."],["Para qué sirve","La contabilidad es una herramienta de gestión que permite tomar decisiones fundamentadas, y no solo cumplir obligaciones tributarias. Sus informes son relevantes para directivos, inversionistas, proveedores y entidades públicas."],["Responsabilidad del profesional","Debe proteger la calidad, transparencia y exactitud de los datos. El documento destaca responsabilidad ética y técnica, rigor, orden y vocabulario contable adecuado."]]},{"id":"software","name":"Software contable","short":"Funciones, tipos y beneficios","accent":"#5fb4ef","source":"EL SOFTWARE CONTABLE.docx","sections":[["Qué es y qué hace","Es un programa computarizado que centraliza la información financiera y registra operaciones como compras, ventas, inventarios y cuentas por cobrar. Puede generar informes, balances y estados financieros, realizar seguimiento diario y brindar datos oportunos."],["Ventajas y límites","Reduce papeleo, tiempos y errores; mejora el acceso a información para decidir. Requiere inversión, selección adecuada, capacitación, soporte y actualización. No reemplaza la supervisión del profesional contable."],["Características esenciales","Fácil manejo, actualización y soporte técnico, informes, flexibilidad, capacidad de almacenamiento, seguridad por permisos y unificación de procesos."],["Tipos mencionados","Hojas de cálculo, software personalizado, comercial, ERP, gratuito y en línea. El ERP integra departamentos; el online permite acceso mediante internet; una hoja de cálculo básica puede carecer de integración y controles contables."]]}];
 const QUESTIONS=[{"id":"q01","topic":"empresa","q":"Según el material, ¿qué hace principalmente una empresa?","options":["Administra únicamente recursos del Estado","Produce bienes o presta servicios para atender necesidades","Se dedica exclusivamente a tributar","Reemplaza a los consumidores"],"answer":1,"why":"La empresa desarrolla actividad económica mediante bienes o servicios que responden a demandas.","source":"La Empresa · Introducción"},{"id":"q02","topic":"empresa","q":"¿Qué elemento se considera necesario para orientar una empresa?","options":["Misión y objetivos claros","Ausencia de estrategia","Exclusión de normas","Solo un logotipo"],"answer":0,"why":"El material destaca misión, objetivos, estrategia y planificación.","source":"La Empresa · Introducción"},{"id":"q03","topic":"empresa","q":"¿Qué actividades predominaron en la época primitiva?","options":["Banca digital y exportaciones","Caza, pesca y recolección","Producción fabril en serie","Comercio electrónico"],"answer":1,"why":"Los grupos se organizaban para subsistir mediante esas actividades.","source":"La Empresa · Época Primitiva"},{"id":"q04","topic":"empresa","q":"¿Cómo se dividía inicialmente el trabajo según el material?","options":["Por acciones bursátiles","Por edad y sexo","Por nacionalidad de las empresas","Por licencia de software"],"answer":1,"why":"El texto describe división del trabajo por edad y sexo.","source":"La Empresa · Época Primitiva"},{"id":"q05","topic":"empresa","q":"¿Qué ejemplo ilustra la administración en las grandes civilizaciones?","options":["Las pirámides de Egipto","Las aplicaciones móviles","Las redes sociales","Los microprocesadores"],"answer":0,"why":"Construcciones como las pirámides exigían coordinación y supervisión del trabajo.","source":"La Empresa · Grandes Civilizaciones"},{"id":"q06","topic":"empresa","q":"¿Qué caracterizó a la administración de la Antigüedad Grecolatina según el material?","options":["Automatización","Cooperativismo digital","Esclavismo y estricta supervisión","Oficinas virtuales"],"answer":2,"why":"El documento describe un modelo coercitivo sustentado en esclavismo.","source":"La Empresa · Antigüedad Grecolatina"},{"id":"q07","topic":"empresa","q":"¿Qué organización aparece vinculada a la Edad Media?","options":["Talleres artesanales y gremios","Corporaciones multinacionales digitales","Startups de IA","Fábricas automatizadas"],"answer":0,"why":"Los maestros, oficiales y aprendices trabajaban en talleres; surgieron gremios.","source":"La Empresa · Edad Media"},{"id":"q08","topic":"empresa","q":"¿A qué organizaciones actuales se consideran antecedentes los gremios medievales?","options":["Bancos centrales","Sindicatos","Plataformas de streaming","Laboratorios"],"answer":1,"why":"El texto identifica a los gremios como antecedentes de los sindicatos.","source":"La Empresa · Edad Media"},{"id":"q09","topic":"empresa","q":"¿Qué cambio acompañó a la Edad Moderna según el documento?","options":["Desaparición total del comercio","Capitalismo comercial y trabajo asalariado","Invención de la nube","Fin de la administración"],"answer":1,"why":"Se describe la contratación de campesinos asalariados y el aumento del comercio.","source":"La Empresa · Edad Moderna"},{"id":"q10","topic":"empresa","q":"¿Cuál fue una consecuencia de la Revolución Industrial?","options":["El fin de toda fábrica","La sustitución de todas las empresas por gremios","Mecanización y producción en serie","La desaparición de las ciudades"],"answer":2,"why":"La mecanización permitió expandir grandes fábricas y producción en serie.","source":"La Empresa · Revolución Industrial"},{"id":"q11","topic":"empresa","q":"En el siglo XX, la administración se consolidó como...","options":["Una actividad innecesaria","Una disciplina para lograr mayor eficiencia","Un tipo de impuesto","Un sistema de trueque"],"answer":1,"why":"El avance industrial hizo esencial coordinar organizaciones complejas.","source":"La Empresa · Siglo XX"},{"id":"q12","topic":"empresa","q":"¿Qué rasgo destaca en las empresas del siglo XXI?","options":["Aislamiento total de mercados","Retorno exclusivo al feudalismo","Globalización, automatización y competitividad","Eliminación de los clientes"],"answer":2,"why":"El texto vincula el siglo XXI con globalización, tecnología y orientación al cliente.","source":"La Empresa · Siglo XXI"},{"id":"q13","topic":"admin","q":"¿A qué autor se atribuye prever, organizar, dirigir, coordinar y controlar?","options":["George R. Terry","Henri Fayol","Agustín Reyes Ponce","James Watt"],"answer":1,"why":"Es la formulación de administrar de Henri Fayol.","source":"Origen y desarrollo · Conceptos"},{"id":"q14","topic":"admin","q":"¿Cuál de estas definiciones corresponde a José Antonio Fernández Arena?","options":["Una ciencia social orientada a objetivos institucionales mediante esfuerzo humano coordinado","Un simple registro de facturas","Un programa para ventas","Una organización sin objetivos"],"answer":0,"why":"El autor enfatiza una estructura y el esfuerzo humano coordinado.","source":"Origen y desarrollo · Conceptos"},{"id":"q15","topic":"admin","q":"¿Quién relaciona la administración con la máxima eficiencia de un organismo social?","options":["Agustín Reyes Ponce","James Watt","Henri Ford","Adam Smith"],"answer":0,"why":"Reyes Ponce la describe como conjunto sistemático de reglas para lograr máxima eficiencia.","source":"Origen y desarrollo · Conceptos"},{"id":"q16","topic":"admin","q":"¿Qué secuencia se menciona en la definición de George R. Terry?","options":["Registro, facturación, archivo, venta","Planeación, organización, ejecución y control","Comprar, vender, publicar y cerrar","Cazar, pescar y recolectar"],"answer":1,"why":"Terry la presenta como un proceso distintivo con esas cuatro actividades.","source":"Origen y desarrollo · Conceptos"},{"id":"q17","topic":"admin","q":"¿Qué significa universalidad de la administración?","options":["Solo existe en empresas grandes","Está presente donde existe un organismo social","Solo se aplica a contadores","Es específica de un país"],"answer":1,"why":"Puede encontrarse en Estado, empresas, ejército y otras organizaciones.","source":"Origen y desarrollo · Características"},{"id":"q18","topic":"admin","q":"¿A qué se refiere la especificidad administrativa?","options":["Es idéntica a la contabilidad","Siempre opera sin personas","Es distinta de fenómenos técnicos, jurídicos y contables","Solo se estudia en universidades"],"answer":2,"why":"La función administrativa conserva identidad propia aunque conviva con otras funciones.","source":"Origen y desarrollo · Características"},{"id":"q19","topic":"admin","q":"¿Qué expresa la unidad temporal?","options":["Que planear impide controlar","Que las fases administrativas pueden coexistir","Que solo se administra una hora al día","Que las etapas nunca se relacionan"],"answer":1,"why":"Planear, organizar, dirigir y controlar pueden darse simultáneamente.","source":"Origen y desarrollo · Características"},{"id":"q20","topic":"admin","q":"¿Qué significa unidad jerárquica?","options":["Solo manda el propietario","Los niveles de autoridad participan en un mismo cuerpo administrativo","No existen supervisores","Todos tienen exactamente las mismas atribuciones"],"answer":1,"why":"Jefaturas de distintos niveles participan en una misma administración.","source":"Origen y desarrollo · Características"},{"id":"q21","topic":"admin","q":"¿Por qué es importante administrar bien en una pyme?","options":["Para evitar toda competencia","Para coordinar recursos y mejorar competitividad","Para eliminar el personal","Para prescindir de objetivos"],"answer":1,"why":"El material señala la mejora administrativa como vía para competir con organizaciones mayores.","source":"Origen y desarrollo · Importancia"},{"id":"q22","topic":"admin","q":"¿Cuál es un resultado de una administración adecuada?","options":["Reducción inevitable de productividad","Mejora de productividad","Desaparición del mercado","Ausencia de coordinación"],"answer":1,"why":"La buena administración ayuda a coordinar recursos y elevar la productividad.","source":"Origen y desarrollo · Importancia"},{"id":"q23","topic":"admin","q":"¿Cuál es la diferencia planteada entre administración pública y privada?","options":["El idioma usado","La pública busca eficiencia en organismos de orden público; la privada en organismos privados","La pública no organiza nada","La privada no puede controlar"],"answer":1,"why":"La distinción del artículo depende del tipo de organismo social.","source":"Origen y desarrollo · Pública y privada"},{"id":"q24","topic":"admin","q":"¿Cuándo surge la administración, según el artículo?","options":["Solo con las computadoras","Cuando las personas comienzan a trabajar organizadamente en sociedad","Al inventarse la web","Solo después de 2000"],"answer":1,"why":"El artículo sitúa sus antecedentes en la cooperación y organización humana.","source":"Origen y desarrollo · Administración general"},{"id":"q25","topic":"formalizacion","q":"¿Qué es formalizar una empresa según la OIT?","options":["Trasladarla de ciudad","Incorporarla a la economía formal","Cerrar sus operaciones","Cambiar únicamente el logo"],"answer":1,"why":"La definición de la OIT es la incorporación a la economía formal.","source":"OIT · p. 1"},{"id":"q26","topic":"formalizacion","q":"¿Cuál es una dimensión de la formalización?","options":["Registro y licencias ante autoridades","Eliminar registros tributarios","Ocultar empleados","Evitar las leyes laborales"],"answer":0,"why":"Incluye registro, licencias, seguridad social y cumplimiento legal.","source":"OIT · p. 1"},{"id":"q27","topic":"formalizacion","q":"La formalización de una empresa es un proceso...","options":["Siempre instantáneo","Gradual","Prohibido para pymes","Exclusivamente tecnológico"],"answer":1,"why":"Una empresa puede formalizar aspectos en distintos momentos.","source":"OIT · p. 1"},{"id":"q28","topic":"formalizacion","q":"¿Qué objetivo destaca la OIT al promover formalización?","options":["Crear más y mejores empleos","Evitar los aportes de seguridad social","Eliminar controles","Reducir la productividad"],"answer":0,"why":"Se busca más trabajo decente, menos pobreza y vulnerabilidad.","source":"OIT · p. 1"},{"id":"q29","topic":"formalizacion","q":"¿Qué beneficio puede ofrecer la formalización a una empresa?","options":["Acceder a financiación y mercados","Quedar exenta de toda norma","Garantizar ganancias ilimitadas","Nunca pagar impuestos"],"answer":0,"why":"El material menciona financiación, mercados, licitaciones y menor exposición a sanciones.","source":"OIT · p. 1"},{"id":"q30","topic":"formalizacion","q":"¿Qué efecto social se asocia con empresas formalizadas?","options":["Menor disponibilidad de servicios públicos por definición","Mayores ingresos fiscales para servicios públicos","Supresión del empleo","Imposibilidad de competir"],"answer":1,"why":"La formalización puede ampliar ingresos fiscales que financian bienes y servicios públicos.","source":"OIT · p. 1"},{"id":"q31","topic":"formalizacion","q":"¿Cuál de estas medidas favorece la formalización según la OIT?","options":["Trámites registrales más complejos","Reducir obstáculos al registro y cumplimiento","Suspender toda capacitación","Limitar acceso a mercados"],"answer":1,"why":"La OIT recomienda facilitar trámites y reducir obstáculos de entrada.","source":"OIT · p. 2"},{"id":"q32","topic":"formalizacion","q":"¿Qué recomendación de la OIT se menciona sobre transición a la economía formal?","options":["Recomendación 204","Recomendación 10","Recomendación 500","Recomendación 1"],"answer":0,"why":"El documento cita expresamente la Recomendación núm. 204.","source":"OIT · p. 2"},{"id":"q33","topic":"formalizacion","q":"En el modelo de intervención de la OIT, ¿qué aparece como resultado final?","options":["Más empleo de calidad y menor vulnerabilidad","Más papeleo necesariamente","Desaparición de los mercados","Menos cohesión social"],"answer":0,"why":"El esquema plantea mejora del empleo, reducción de vulnerabilidad y cohesión social.","source":"OIT · p. 2, diagrama"},{"id":"q34","topic":"formalizacion","q":"La formalización también busca reducir...","options":["La seguridad jurídica","La competencia desleal de empresas informales","La información empresarial","La cobertura social"],"answer":1,"why":"La OIT indica que reduce competencia desleal para empresas que cumplen sus obligaciones.","source":"OIT · p. 1"},{"id":"q35","topic":"contabilidad","q":"¿Qué operaciones realiza la contabilidad según la tarea?","options":["Registra, clasifica y resume operaciones económicas","Solo diseña campañas publicitarias","Únicamente recluta empleados","Borra la información financiera"],"answer":0,"why":"La tarea define estas funciones para producir información fiable.","source":"Tarea Nº 1 · Párrafo 1"},{"id":"q36","topic":"contabilidad","q":"¿Qué información aporta la contabilidad?","options":["Solo inventario de muebles","Situación patrimonial y resultados de la empresa","El color del logotipo","Únicamente horarios"],"answer":1,"why":"Informa sobre patrimonio y resultados para apoyar decisiones.","source":"Tarea Nº 1 · Párrafo 1"},{"id":"q37","topic":"contabilidad","q":"¿Para qué sirve la contabilidad además de cumplir obligaciones fiscales?","options":["Solo aumentar archivos físicos","Apoyar la toma de decisiones empresariales","Eliminar toda auditoría","Impedir el análisis"],"answer":1,"why":"La tarea recalca que es una herramienta de gestión, no solo tributaria.","source":"Tarea Nº 1 · Párrafos 2–3"},{"id":"q38","topic":"contabilidad","q":"¿Qué cualidades debe tener la información contable?","options":["Ambigua y tardía","Confiable, oportuna y verificable","Secreta para toda la empresa","Solo aproximada"],"answer":1,"why":"La tarea emplea esas tres cualidades de la información contable.","source":"Tarea Nº 1 · Párrafo 1"},{"id":"q39","topic":"contabilidad","q":"¿Quiénes pueden usar la información contable?","options":["Solo empleados del área de limpieza","Directivos, inversionistas y entidades públicas, entre otros","Exclusivamente desarrolladores","Nadie fuera del banco"],"answer":1,"why":"Diferentes interesados necesitan información para decidir.","source":"Tarea Nº 1 · Párrafo 2"},{"id":"q40","topic":"contabilidad","q":"¿Qué responsabilidad destaca en el profesional contable?","options":["Rigor ético y técnico","Ocultar errores sin registro","Evitar supervisión","Garantizar utilidades"],"answer":0,"why":"La calidad de los datos afecta la confianza de interesados.","source":"Tarea Nº 1 · Párrafo 2"},{"id":"q41","topic":"contabilidad","q":"En el trabajo, ¿cómo se caracteriza a la empresa?","options":["Unidad económico-social con recursos humanos, materiales, técnicos y financieros","Un tipo de computadora","Un edificio exclusivamente","Una entidad sin personas"],"answer":0,"why":"El primer párrafo describe los recursos y el propósito económico-social.","source":"Tarea Nº 1 · Párrafo 1"},{"id":"q42","topic":"contabilidad","q":"¿Qué impulsa la competencia según la tarea?","options":["La mejora continua en calidad, precio y servicio","La suspensión total de actividad","La desaparición de clientes","La obligación de usar un software"],"answer":0,"why":"La competencia puede estimular mejores productos y servicios.","source":"Tarea Nº 1 · Párrafo 1"},{"id":"q43","topic":"contabilidad","q":"¿Qué visión del aprendizaje expresa la tarea?","options":["La contabilidad solo existe por impuestos","La contabilidad es un lenguaje de los negocios para gestionar con transparencia","Los datos financieros no importan","La gestión debe evitar números"],"answer":1,"why":"El cierre la presenta como herramienta de gestión y lenguaje empresarial.","source":"Tarea Nº 1 · Párrafo 3"},{"id":"q44","topic":"software","q":"¿Qué es un software contable?","options":["Un juego comercial","Un programa que integra información financiera y facilita operaciones contables","Una red social","Una impresora"],"answer":1,"why":"El documento lo define como programa computarizado con datos financieros integrados.","source":"Software contable · Definición"},{"id":"q45","topic":"software","q":"¿Qué operaciones puede registrar un software contable?","options":["Ventas, compras, inventarios y cuentas por cobrar","Solo fotografías de productos","Únicamente llamadas","Solo correo electrónico"],"answer":0,"why":"Esas operaciones aparecen entre sus principales datos.","source":"Software contable · Definición"},{"id":"q46","topic":"software","q":"¿Cuál es un objetivo del software contable?","options":["Aumentar el trabajo duplicado","Centralizar información y ofrecer datos oportunos","Evitar todo informe","Eliminar toda contabilidad"],"answer":1,"why":"Los objetivos listan seguimiento diario, procesos ágiles, centralización e información oportuna.","source":"Software contable · Objetivos"},{"id":"q47","topic":"software","q":"¿Qué ventaja ofrece automatizar la contabilidad?","options":["Más papeleo","Menos tiempo invertido y menor margen de error","Imposibilidad de analizar datos","Obligación de escribir todo a mano"],"answer":1,"why":"El texto destaca ahorro de tiempo, menos papel y mayor precisión.","source":"Software contable · Importancia"},{"id":"q48","topic":"software","q":"¿El software contable sustituye totalmente al contador?","options":["Sí, siempre","No; el profesional debe supervisar y verificar registros","Sí, porque ya no existen principios contables","Solo si se usa Excel"],"answer":1,"why":"El material indica que el contador sigue siendo necesario para asegurar calidad de registros.","source":"Software contable · Para el contador"},{"id":"q49","topic":"software","q":"¿Qué debe valorarse al elegir un software contable?","options":["Solo la tipografía","Costos, necesidades, capacitación, soporte y seguridad","Solo el color de la interfaz","La cantidad de emojis"],"answer":1,"why":"El material aborda inversión, selección, capacitación y requisitos funcionales.","source":"Software contable · Beneficios y características"},{"id":"q50","topic":"software","q":"¿Cuál es una característica esencial del software contable?","options":["Interfaz difícil de aprender","Fácil manejo","Ausencia de copias de datos","Sin soporte"],"answer":1,"why":"La facilidad de uso reduce esfuerzo de capacitación.","source":"Software contable · Características"},{"id":"q51","topic":"software","q":"¿Para qué sirven los permisos de usuario en un software contable?","options":["Para difundir datos confidenciales","Para restringir acceso a información sensible","Para eliminar los controles","Para desactivar auditoría"],"answer":1,"why":"El documento resalta claves y permisos para proteger datos confidenciales.","source":"Software contable · Seguridad"},{"id":"q52","topic":"software","q":"¿Qué característica permite adaptarse al crecimiento de la empresa?","options":["Rigidez completa","Flexibilidad","Falta de informes","Ausencia de almacenamiento"],"answer":1,"why":"El sistema debe adaptarse a cambios en el plan contable y operaciones.","source":"Software contable · Flexibilidad"},{"id":"q53","topic":"software","q":"¿Qué tipo de software integra producción, distribución, administración y contabilidad?","options":["ERP o planificación empresarial","Solo una hoja de cálculo","Un editor de texto","Un reproductor multimedia"],"answer":0,"why":"Los ERP enlazan información de múltiples departamentos.","source":"Software contable · Tipos"},{"id":"q54","topic":"software","q":"¿Qué distingue al software contable online según el texto?","options":["Solo funciona en una PC sin conexión","Permite acceso por internet sin instalación local necesariamente","Es obligatoriamente gratuito","No puede usarse en móviles"],"answer":1,"why":"Se describe almacenamiento accesible desde internet y posibles apps móviles.","source":"Software contable · Tipos"},{"id":"q55","topic":"software","q":"¿Qué limitación atribuye el material a una hoja de cálculo básica?","options":["Integración automática de todos los procesos","Posibles errores manuales y falta de integración","Nunca permite registrar compras","Es siempre más segura que cualquier ERP"],"answer":1,"why":"Las plantillas básicas pueden no integrar operaciones ni prevenir errores contables.","source":"Software contable · Tipos"},{"id":"q56","topic":"software","q":"¿Qué implica la capacidad de generar informes?","options":["Impedir estadísticas","Obtener reportes sobre ventas, costos, inventario y otros datos","Usar solo un formato de papel","Eliminar saldos"],"answer":1,"why":"Los informes permiten monitorear operaciones en períodos o tiempo real.","source":"Software contable · Características"},{"id":"q57","topic":"software","q":"¿Qué desventaja se menciona del software personalizado?","options":["Siempre es gratis","Puede implicar alto costo y soporte especializado","No se adapta a necesidades específicas","No requiere desarrollo"],"answer":1,"why":"El documento indica inversión considerable y soporte para soluciones propias.","source":"Software contable · Tipos"}];
 const FLASH=[["empresa","Empresa","Organización que produce bienes o presta servicios para satisfacer necesidades mediante actividad económica."],["empresa","Edad Media","Talleres artesanales con maestros, oficiales y aprendices; gremios como antecedente de sindicatos."],["empresa","Revolución Industrial","Mecanización, expansión de fábricas y producción en serie."],["empresa","Siglo XXI","Globalización, automatización, competitividad y orientación al cliente."],["admin","Henri Fayol","Prever, organizar, dirigir, coordinar y controlar."],["admin","George R. Terry","Planeación, organización, ejecución y control."],["admin","Universalidad","La administración está presente donde existe un organismo social."],["admin","Especificidad","La función administrativa es distinta de las funciones técnicas o contables."],["admin","Unidad temporal","Las etapas administrativas pueden ocurrir simultáneamente."],["admin","Unidad jerárquica","Distintos niveles de jefatura integran un mismo cuerpo administrativo."],["formalizacion","Formalización empresarial","Incorporación gradual de empresas a la economía formal."],["formalizacion","Tres dimensiones","Registro y licencias; seguridad social; cumplimiento tributario y laboral."],["formalizacion","Recomendación 204","Referencia OIT a la transición de la economía informal a la formal."],["formalizacion","Beneficios de formalizar","Acceso a financiación y mercados, menos riesgo de sanciones y mejora de empleo."],["contabilidad","Contabilidad","Disciplina técnica que registra, clasifica y resume operaciones económicas."],["contabilidad","Información contable de calidad","Confiable, oportuna y verificable."],["contabilidad","Función gerencial","Apoyar decisiones empresariales informadas, no solo cumplir obligaciones fiscales."],["software","Software contable","Programa que centraliza información financiera y simplifica operaciones."],["software","ERP","Integra información de múltiples departamentos de la empresa."],["software","Software online","Información accesible mediante internet, sin requerir instalación local necesariamente."],["software","Control de acceso","Contraseñas y permisos para proteger información confidencial."],["software","Rol del contador","Supervisar registros y comprobar su cumplimiento de principios contables."]];
-const ICONS={home:'<path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 21v-8h6v8"/>',book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',check:'<path d="M20 6 9 17l-5-5"/>',zap:'<path d="m13 2-3 8h8l-7 12 2-9H5z"/>',layers:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/>',target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',alert:'<path d="M10.3 3.9 2 18.1A2 2 0 0 0 3.7 21h16.6a2 2 0 0 0 1.7-2.9L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 4h.01"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/>',arrow:'<path d="M5 12h14m-7-7 7 7-7 7"/>',brain:'<path d="M12 18V5a3 3 0 0 0-5.7-1.2A4 4 0 0 0 3 11a4 4 0 0 0 3 7 3 3 0 0 0 6 0ZM12 18V5a3 3 0 0 1 5.7-1.2A4 4 0 0 1 21 11a4 4 0 0 1-3 7 3 3 0 0 1-6 0Z"/>',chart:'<path d="M3 3v18h18M7 16v-4m5 4V8m5 8V5"/>',rotate:'<path d="M3 11a9 9 0 0 1 15-6l3 3m0-5v5h-5M21 13a9 9 0 0 1-15 6l-3-3m0 5v-5h5"/>'};
-function icon(name,size=18){return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]||ICONS.book}</svg>`}
-const NAV=[['home','Inicio','home'],['temario','Temario','book'],['practica','Practicar','target'],['flash','Flashcards','layers'],['errores','Mis errores','alert'],['examen','Simulacro','clock']];
+const ICONS={"home":"<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\" />\n  <path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\" />","book":"<path d=\"M12 5v16\" />\n  <path d=\"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z\" />","check":"<path d=\"M20 6 9 17l-5-5\" />","zap":"<path d=\"M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z\" />","layers":"<path d=\"M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z\" />\n  <path d=\"M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12\" />\n  <path d=\"M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17\" />","target":"<circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <circle cx=\"12\" cy=\"12\" r=\"6\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" />","alert":"<path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\" />\n  <path d=\"M12 9v4\" />\n  <path d=\"M12 17h.01\" />","clock":"<circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M12 6v6l4 2\" />","arrow":"<path d=\"M5 12h14\" />\n  <path d=\"m12 5 7 7-7 7\" />","chart":"<path d=\"M5 21v-6\" />\n  <path d=\"M12 21V3\" />\n  <path d=\"M19 21V9\" />","rotate":"<path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\" />\n  <path d=\"M3 3v5h5\" />","sun":"<circle cx=\"12\" cy=\"12\" r=\"4\" />\n  <path d=\"M12 2v2\" />\n  <path d=\"M12 20v2\" />\n  <path d=\"m4.93 4.93 1.41 1.41\" />\n  <path d=\"m17.66 17.66 1.41 1.41\" />\n  <path d=\"M2 12h2\" />\n  <path d=\"M20 12h2\" />\n  <path d=\"m6.34 17.66-1.41 1.41\" />\n  <path d=\"m19.07 4.93-1.41 1.41\" />","moon":"<path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\" />","menu":"<path d=\"M4 5h16\" />\n  <path d=\"M4 12h16\" />\n  <path d=\"M4 19h16\" />","close":"<path d=\"M18 6 6 18\" />\n  <path d=\"m6 6 12 12\" />","more":"<circle cx=\"12\" cy=\"12\" r=\"1\" />\n  <circle cx=\"19\" cy=\"12\" r=\"1\" />\n  <circle cx=\"5\" cy=\"12\" r=\"1\" />","pause":"<rect x=\"14\" y=\"3\" width=\"5\" height=\"18\" rx=\"1\" />\n  <rect x=\"5\" y=\"3\" width=\"5\" height=\"18\" rx=\"1\" />","complete":"<circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"m16 9-5.5 5.5L8 12\" />"};
+function icon(name,size=18){return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]||ICONS.book}</svg>`}
+const NAV=[['home','Inicio','home'],['temario','Temario','book'],['practica','Practicar','target'],['flash','Flashcards','layers'],['errores','Mis errores','alert'],['examen','Simulacro','clock'],['materiales','Materiales','book']];
 let saved={};try{saved=JSON.parse(localStorage.getItem('repaso-unibe-v1')||'{}')}catch(e){};
 if(!saved||typeof saved!=='object'||Array.isArray(saved))saved={};
 const state={screen:'home',topic:'all',hist:saved.hist||{},sessions:saved.sessions||[],quiz:null,flashIndex:0,flashBack:false,flashTopic:'all',search:'',exam:null};
 const root=document.getElementById('root');const $=id=>document.getElementById(id);const topic=id=>TOPICS.find(t=>t.id===id);const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 function save(){try{localStorage.setItem('repaso-unibe-v1',JSON.stringify({version:2,hist:state.hist,sessions:state.sessions,screen:state.screen,quiz:state.quiz,exam:state.exam,development:state.development}));storageFailed=false}catch(e){storageFailed=true}}
 function done(){return Object.values(state.hist).filter(x=>x.seen>0).length}function wrongIds(){return QUESTIONS.filter(q=>state.hist[q.id]?.wrong>0&&(!state.hist[q.id]?.lastCorrect))}function accuracy(){let h=Object.values(state.hist);let a=h.reduce((s,v)=>s+(v.right||0),0),b=h.reduce((s,v)=>s+(v.seen||0),0);return b?Math.round(a/b*100):0}
-function updateNav(){let mobile=$('mobileNav');mobile.innerHTML=NAV.map(([id,label])=>`<option value="${id}">${label}</option>`).join('');mobile.value=state.screen;$('nav').innerHTML=NAV.map(([id,label,ico])=>`<button class="nav ${state.screen===id?'active':''}" data-nav="${id}">${icon(ico)}<span>${label}</span>${id==='errores'&&wrongIds().length?`<span class="navcount">${wrongIds().length}</span>`:''}</button>`).join('');document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>go(b.dataset.nav));mobile.onchange=e=>go(e.target.value);$('breadcrumb').textContent=`ESTUDIO / ${NAV.find(n=>n[0]===state.screen)?.[1].toUpperCase()}`}
+function updateNav(){
+  const mobile=$('mobileNav');
+  mobile.innerHTML=NAV.map(([id,label])=>`<option value="${id}">${label}</option>`).join('');mobile.value=state.screen;
+  const groups=[['Biblioteca',['home','temario','materiales']],['Estudio',['practica','emergencia','flash','desarrollo','examen']],['Seguimiento',['errores','dashboard']]];
+  $('nav').innerHTML=groups.map(([label,ids])=>`<span class="nav-heading">${label}</span>`+ids.map(id=>{const [,name,ico]=NAV.find(n=>n[0]===id);return `<button class="nav ${state.screen===id?'active':''}" data-nav="${id}" ${state.screen===id?'aria-current="page"':''}>${icon(ico)}<span>${name}</span>${id==='errores'&&wrongIds().length?`<span class="navcount">${wrongIds().length}</span>`:''}</button>`}).join('')).join('');
+  document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>go(b.dataset.nav));mobile.onchange=e=>go(e.target.value);
+  $('breadcrumb').textContent=`Repaso / ${NAV.find(n=>n[0]===state.screen)?.[1]||'Inicio'}`;
+}
 function go(s){const a=activeSession();if(a&&s!==a.screen)pauseSession();state.screen=s;render();window.scrollTo({top:0,behavior:'instant'})}
-function header(title,desc){return `<div class="sectionline" style="margin-top:0"><div><div class="eyebrow">CONTABILIDAD · MATERIAL DE CLASE</div><h1 style="font-size:clamp(26px,3vw,34px);letter-spacing:-1px;margin:6px 0">${title}</h1><p class="muted" style="margin:0">${desc}</p></div></div>`}
+function header(title,desc){return `<header class="page-header"><div class="eyebrow">CUADERNO DE ESTUDIO</div><h1>${esc(title)}</h1><p>${esc(desc)}</p></header>`}
 function topicalCards(){return `<div class="topics">${TOPICS.map((t,i)=>`<button class="topic" data-topic="${t.id}"><div class="topic-icon" style="color:${t.accent};background:${t.accent}20">0${i+1}</div><div><strong>${esc(t.name)}</strong><p>${esc(t.short)} · ${QUESTIONS.filter(q=>q.topic===t.id).length} preguntas</p></div><span class="arrow">${icon('arrow')}</span></button>`).join('')}</div>`}
-function home(){return `<div class="hero"><div><div class="eyebrow" style="color:#b9aaff">TU CENTRO DE PREPARACIÓN</div><h1>Un examen más cerca.<br><span style="color:#b8a7ff">Vos más preparado.</span></h1><p>Todo el material reunido en un solo lugar. Repasá conceptos, practicá preguntas y fortalecé tus puntos débiles.</p><div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:19px"><button class="btn primary" id="startNow">${icon('zap',16)} Empezar a practicar</button><button class="btn ghost" id="readNow">Ver temario</button></div></div><div class="herovisual"><span>∑</span></div></div><div class="sectionline"><h2>Tu progreso</h2><span class="source">Se guarda automáticamente en este dispositivo</span></div><div class="grid3"><div class="metric"><div class="head">${icon('check',15)} Preguntas vistas</div><div class="value">${done()}<span style="font-size:16px;color:#8190a9"> / ${QUESTIONS.length}</span></div><div class="progress"><div style="width:${done()/QUESTIONS.length*100}%"></div></div></div><div class="metric"><div class="head">${icon('target',15)} Aciertos acumulados</div><div class="value">${accuracy()}%</div><div class="sub">Todas las respuestas practicadas</div></div><div class="metric"><div class="head">${icon('alert',15)} Errores por recuperar</div><div class="value" style="color:${wrongIds().length?'var(--amber)':'var(--green)'}">${wrongIds().length}</div><div class="sub">Preguntas falladas aún no acertadas</div></div></div><div class="sectionline"><h2>Unidades de estudio</h2><span class="source">5 temas basados en tus archivos</span></div>${topicalCards()}<div class="sectionline"><h2>Ruta recomendada</h2></div><div class="grid2"><div class="panel"><div style="display:flex;gap:11px;align-items:center">${icon('book',24)} <b>1 · Comprendé los conceptos</b></div><p class="muted smalltext">Leé los resúmenes por unidad y repasá las definiciones.</p><button class="btn small" data-route="temario">Ver apuntes ${icon('arrow',14)}</button></div><div class="panel"><div style="display:flex;gap:11px;align-items:center">${icon('target',24)} <b>2 · Ponete a prueba</b></div><p class="muted smalltext">Respondé, revisá cada explicación y repetí los errores.</p><button class="btn small" data-route="practica">Practicar ahora ${icon('arrow',14)}</button></div></div><p class="notice">Contenido elaborado únicamente a partir de los archivos compartidos. Las preguntas son simuladas, no un examen oficial.</p>`}
-function temario(){return `${header('Temario de estudio','Resúmenes breves para entender antes de memorizar.')}<div class="toolbar" id="topicFilters"><button class="tag ${state.topic==='all'?'on':''}" data-filter="all">Todos</button>${TOPICS.map(t=>`<button class="tag ${state.topic===t.id?'on':''}" data-filter="${t.id}">${t.name}</button>`).join('')}</div><input class="search" placeholder="Buscar un concepto o definición..." id="termSearch" value="${esc(state.search)}"><div id="notes" style="margin-top:18px"></div>`}
+function home(){return `
+<section class="welcome" aria-labelledby="welcomeTitle">
+  <div><div class="eyebrow">CONTABILIDAD · UNIBE</div>
+    <h1 id="welcomeTitle">Un tema a la vez.</h1>
+    <p class="intro">Leé, practicá y volvé sobre lo que necesita otra mirada. Tu espacio de repaso para el examen.</p>
+    <div class="welcome-actions"><button class="btn primary" id="startNow">Practicar ${icon('arrow',16)}</button><button class="btn" id="readNow">Consultar temario</button></div>
+  </div>
+  <div class="course-index"><span>GUÍA DE ESTUDIO</span><span>05 unidades / 57 preguntas</span></div>
+</section>
+<section aria-label="Progreso de estudio"><div class="grid3">
+  <div class="metric"><div class="head">Preguntas respondidas</div><div class="value">${done()} <span>/ ${QUESTIONS.length}</span></div><div class="progress"><div style="width:${done()/QUESTIONS.length*100}%"></div></div></div>
+  <div class="metric"><div class="head">Aciertos acumulados</div><div class="value">${done()?accuracy()+'%':'—'}</div><div class="sub">${done()?'Sobre todos los intentos':'Todavía sin respuestas'}</div></div>
+  <div class="metric"><div class="head">Errores pendientes</div><div class="value">${wrongIds().length}</div><div class="sub">Para volver a practicar</div></div>
+</div></section>
+<div class="home-columns">
+  <section><div class="sectionline"><h2>Unidades del curso</h2><span class="source">Temario y apuntes</span></div>${topicalCards()}</section>
+  <section><div class="sectionline"><h2>Formas de repasar</h2></div>
+    <button class="study-link" data-route="emergencia">${icon('zap')}<span><strong>Repaso de emergencia</strong><small>20 preguntas sobre tus puntos débiles.</small></span></button>
+    <button class="study-link" data-route="examen">${icon('clock')}<span><strong>Simulacro de examen</strong><small>Una ronda con tiempo y corrección final.</small></span></button>
+    <button class="study-link" data-route="materiales">${icon('book')}<span><strong>Materiales de Moodle</strong><small>Lecturas, actividades y 11 videos por clase.</small></span></button>
+    <button class="study-link" data-route="flash">${icon('layers')}<span><strong>Flashcards</strong><small>22 conceptos para repasar de memoria.</small></span></button>
+    <button class="study-link" data-route="desarrollo">${icon('book')}<span><strong>Preguntas de desarrollo</strong><small>Explicá los conceptos con tus palabras.</small></span></button>
+    <button class="study-link" data-route="dashboard">${icon('chart')}<span><strong>Tu rendimiento</strong><small>Resultados y próximos temas a reforzar.</small></span></button>
+  </section>
+</div>
+<p class="notice">Material de repaso basado en tus documentos de clase. Las preguntas son de práctica, no un examen oficial.</p>`}
+function temario(){return `${header('Temario de estudio','Resúmenes breves para entender antes de memorizar.')}<div class="toolbar" id="topicFilters"><button class="tag ${state.topic==='all'?'on':''}" data-filter="all">Todos</button>${TOPICS.map(t=>`<button class="tag ${state.topic===t.id?'on':''}" data-filter="${t.id}">${t.name}</button>`).join('')}</div><label for="termSearch" class="source">Buscar en los apuntes</label><input class="search" placeholder="Concepto o definición" id="termSearch" value="${esc(state.search)}"><div id="notes" style="margin-top:18px"></div>`}
 function drawNotes(){const area=$('notes');if(!area)return;let s=state.search.toLocaleLowerCase().trim();let out=[];TOPICS.filter(t=>state.topic==='all'||t.id===state.topic).forEach(t=>{let sections=t.sections.filter(([a,b])=>!s||`${a} ${b} ${t.name}`.toLowerCase().includes(s));if(sections.length)out.push(`<div class="sectionline" style="margin-top:23px"><div><span class="pill">${t.name}</span><h2 style="margin-top:9px">${t.short}</h2></div></div>${sections.map(([a,b])=>`<div class="note"><h3>${a}</h3><p>${b}</p><div class="source" style="margin-top:13px">Fuente declarada: ${esc(t.source)} · Sección del resumen: ${esc(a)}. Documento original no incluido; página sin verificar.</div></div>`).join('')}`)});area.innerHTML=out.join('')||'<div class="empty">No se encontraron conceptos para esta búsqueda.</div>'}
 function shuffle(a){const out=[...a];for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]]}return out}
-function practice(){return `${header('Práctica inteligente','Preguntas de opción múltiple con explicación inmediata.')}${state.quiz?quizView():`<div class="columns"><div class="panel"><div class="eyebrow">ELEGÍ EL TEMA</div><div class="toolbar"><button class="tag ${state.topic==='all'?'on':''}" data-filter="all">Todos (${QUESTIONS.length})</button>${TOPICS.map(t=>`<button class="tag ${state.topic===t.id?'on':''}" data-filter="${t.id}">${t.name}</button>`).join('')}</div><div class="hint">Las preguntas salen mezcladas para que practiques sin memorizar el orden. Se explica cada respuesta al corregir.</div><div class="space"></div><button class="btn primary" id="startPractice">${icon('zap',17)} Iniciar práctica</button></div><div class="panel"><b>Tu rendimiento</b><div class="kv"><span class="muted">Preguntas disponibles</span><b>${QUESTIONS.filter(q=>state.topic==='all'||q.topic===state.topic).length}</b></div><div class="kv"><span class="muted">Acierto histórico</span><b>${accuracy()}%</b></div><div class="kv"><span class="muted">Pendientes de recuperación</span><b>${wrongIds().length}</b></div><p class="notice">Podés salir y volver a empezar cuando quieras.</p></div></div>`}`}
+function practice(){return `${header('Práctica','Preguntas de opción múltiple con explicación inmediata.')}${state.quiz?quizView():`<div class="columns"><div class="panel"><div class="eyebrow">ELEGÍ EL TEMA</div><div class="toolbar"><button class="tag ${state.topic==='all'?'on':''}" data-filter="all">Todos (${QUESTIONS.length})</button>${TOPICS.map(t=>`<button class="tag ${state.topic===t.id?'on':''}" data-filter="${t.id}">${t.name}</button>`).join('')}</div><div class="hint">Las preguntas salen mezcladas para que practiques sin memorizar el orden. Se explica cada respuesta al corregir.</div><div class="space"></div><button class="btn primary" id="startPractice">${icon('zap',17)} Iniciar práctica</button></div><div class="panel"><b>Tu rendimiento</b><div class="kv"><span class="muted">Preguntas disponibles</span><b>${QUESTIONS.filter(q=>state.topic==='all'||q.topic===state.topic).length}</b></div><div class="kv"><span class="muted">Acierto histórico</span><b>${accuracy()}%</b></div><div class="kv"><span class="muted">Pendientes de recuperación</span><b>${wrongIds().length}</b></div><p class="notice">Podés salir y volver a empezar cuando quieras.</p></div></div>`}`}
 function beginQuiz(which='practice',set=null){if(activeSession()){resumeSession();return}const pool=set||QUESTIONS.filter(q=>state.topic==='all'||q.topic===state.topic);if(!pool.length){go('errores');return}state.quiz={ids:adaptive(pool,which==='emergency'?Math.min(20,pool.length):pool.length),at:0,chosen:null,checked:false,right:0,wrong:0,which,answers:{}};state.screen='practica';render()}
 function quizView(){let qu=state.quiz; if(qu.at>=qu.ids.length){let total=qu.ids.length;return `<div class="panel" style="text-align:center;padding:42px 20px"><span class="eyebrow">SESIÓN FINALIZADA</span><div class="results">${Math.round(qu.right/total*100)}%</div><h2>Terminaste esta ronda</h2><p class="muted">${qu.right} correctas · ${qu.wrong} incorrectas · ${total} preguntas</p><div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px"><button class="btn primary" id="again">Otra ronda</button><button class="btn" data-route="errores">Revisar errores</button></div></div>`}
-let x=QUESTIONS.find(q=>q.id===qu.ids[qu.at]);return `<div class="columns"><div class="panel"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><span class="pill">${topic(x.topic).name}</span><span class="source">Pregunta ${qu.at+1} de ${qu.ids.length}</span></div><div class="progress" style="margin-top:14px"><div style="width:${(qu.at+1)/qu.ids.length*100}%"></div></div><h2 class="question">${esc(x.q)}</h2>${x.options.map((o,i)=>`<button class="answer ${qu.chosen===i?'selected':''} ${qu.checked&&i===x.answer?'correct':''} ${qu.checked&&qu.chosen===i&&i!==x.answer?'wrong':''}" data-answer="${i}" ${qu.checked?'disabled':''}><span class="letter">${'ABCD'[i]}</span><span>${esc(o)}</span></button>`).join('')}${qu.checked?`<div class="feedback ${qu.chosen!==x.answer?'bad':''}"><b>${qu.chosen===x.answer?'✓ ¡Correcto!':'Respuesta incorrecta'}</b><p>${esc(x.why)}</p><div class="source" style="margin-top:7px">Fuente: ${esc(x.source)}</div></div>`:''}<div class="footer-actions"><button class="btn ghost small" id="leavePractice">Salir</button><button class="btn primary" id="checkOrNext" ${qu.chosen===null&&!qu.checked?'disabled':''}>${qu.checked?(qu.at===qu.ids.length-1?'Ver resultados':'Siguiente pregunta'):'Comprobar respuesta'} ${icon('arrow',16)}</button></div></div><div class="panel"><div class="eyebrow">SESIÓN ACTUAL</div><div class="kv"><span class="muted">Aciertos</span><b style="color:var(--green)">${qu.right}</b></div><div class="kv"><span class="muted">Errores</span><b style="color:var(--red)">${qu.wrong}</b></div><div class="kv"><span class="muted">Restantes</span><b>${qu.ids.length-qu.at-(qu.checked?1:0)}</b></div><p class="notice">Cada respuesta actualiza automáticamente tus estadísticas.</p></div></div>`}
+let x=QUESTIONS.find(q=>q.id===qu.ids[qu.at]);return `<div class="columns"><div class="panel"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><span class="pill">${topic(x.topic).name}</span><span class="source">Pregunta ${qu.at+1} de ${qu.ids.length}</span></div><div class="progress" style="margin-top:14px"><div style="width:${(qu.at+1)/qu.ids.length*100}%"></div></div><h2 class="question">${esc(x.q)}</h2>${x.options.map((o,i)=>`<button class="answer ${qu.chosen===i?'selected':''} ${qu.checked&&i===x.answer?'correct':''} ${qu.checked&&qu.chosen===i&&i!==x.answer?'wrong':''}" data-answer="${i}" ${qu.checked?'disabled':''}><span class="letter">${'ABCD'[i]}</span><span>${esc(o)}</span></button>`).join('')}${qu.checked?`<div class="feedback ${qu.chosen!==x.answer?'bad':''}"><b>${qu.chosen===x.answer?'Respuesta correcta':'Respuesta incorrecta'}</b><p>${esc(x.why)}</p><div class="source" style="margin-top:7px">Fuente: ${esc(x.source)}</div></div>`:''}<div class="footer-actions"><button class="btn ghost small" id="leavePractice">Salir</button><button class="btn primary" id="checkOrNext" ${qu.chosen===null&&!qu.checked?'disabled':''}>${qu.checked?(qu.at===qu.ids.length-1?'Ver resultados':'Siguiente pregunta'):'Comprobar respuesta'} ${icon('arrow',16)}</button></div></div><div class="panel"><div class="eyebrow">SESIÓN ACTUAL</div><div class="kv"><span class="muted">Aciertos</span><b style="color:var(--green)">${qu.right}</b></div><div class="kv"><span class="muted">Errores</span><b style="color:var(--red)">${qu.wrong}</b></div><div class="kv"><span class="muted">Restantes</span><b>${qu.ids.length-qu.at-(qu.checked?1:0)}</b></div><p class="notice">Cada respuesta actualiza automáticamente tus estadísticas.</p></div></div>`}
 function errors(){let items=wrongIds();return `${header('Mis errores', 'Repasá solo lo que todavía cuesta. Una respuesta correcta aquí recupera el error.')}${items.length?`<div class="panel"><div class="kv"><div><b>${items.length} conceptos para reforzar</b><p class="muted smalltext" style="margin:3px 0">La práctica adaptativa empieza con tus respuestas incorrectas.</p></div><button class="btn primary" id="retryWrong">${icon('rotate',16)} Repasar errores</button></div>${items.map(q=>`<div class="listrow"><b>${esc(q.q)}</b><div class="source">${topic(q.topic).name} · ${esc(q.source)}${state.hist[q.id]?.lastOmitted?' · Omitida en el último simulacro':''}</div></div>`).join('')}</div>`:`<div class="panel empty">${icon('check',36)}<h2 style="color:var(--text)">Sin errores pendientes</h2><p>Cuando falles una pregunta, aparecerá acá hasta que la respondas correctamente.</p><button class="btn primary" data-route="practica">Ir a practicar</button></div>`}`}
-function flashcard(){let list=FLASH.filter(f=>state.flashTopic==='all'||f[0]===state.flashTopic),f=list[state.flashIndex%list.length];return `${header('Flashcards', 'Memorizá definiciones: tocá la tarjeta para ver la respuesta.')}<div class="toolbar"><button class="tag ${state.flashTopic==='all'?'on':''}" data-flashtopic="all">Todos</button>${TOPICS.map(t=>`<button class="tag ${state.flashTopic===t.id?'on':''}" data-flashtopic="${t.id}">${t.name}</button>`).join('')}</div><div class="panel"><div style="display:flex;justify-content:space-between;margin-bottom:15px"><span class="pill">${topic(f[0]).name}</span><span class="source">${state.flashIndex%list.length+1} / ${list.length}</span></div><button class="face" id="flip"><span class="eyebrow" style="color:#c1b5fd">${state.flashBack?'RESPUESTA':'CONCEPTO'}</span>${state.flashBack?`<p style="font-size:18px;color:#e6e8fc">${esc(f[2])}</p>`:`<h2>${esc(f[1])}</h2>`}<span style="font-size:12px;color:#a6add5">Tocá para ${state.flashBack?'ver el concepto':'revelar la respuesta'}</span></button><div class="footer-actions"><button class="btn" id="flashPrev">Anterior</button><button class="btn primary" id="flashNext">Siguiente ${icon('arrow',16)}</button></div></div>`}
+function flashcard(){let list=FLASH.filter(f=>state.flashTopic==='all'||f[0]===state.flashTopic),f=list[state.flashIndex%list.length];return `${header('Flashcards', 'Memorizá definiciones: tocá la tarjeta para ver la respuesta.')}<div class="toolbar"><button class="tag ${state.flashTopic==='all'?'on':''}" data-flashtopic="all">Todos</button>${TOPICS.map(t=>`<button class="tag ${state.flashTopic===t.id?'on':''}" data-flashtopic="${t.id}">${t.name}</button>`).join('')}</div><div class="panel"><div style="display:flex;justify-content:space-between;margin-bottom:15px"><span class="pill">${topic(f[0]).name}</span><span class="source">${state.flashIndex%list.length+1} / ${list.length}</span></div><button class="face" id="flip"><span class="eyebrow" >${state.flashBack?'RESPUESTA':'CONCEPTO'}</span>${state.flashBack?`<p >${esc(f[2])}</p>`:`<h2>${esc(f[1])}</h2>`}<span >Tocá para ${state.flashBack?'ver el concepto':'revelar la respuesta'}</span></button><div class="footer-actions"><button class="btn" id="flashPrev">Anterior</button><button class="btn primary" id="flashNext">Siguiente ${icon('arrow',16)}</button></div></div>`}
 function exam(){return `${header('Simulacro de examen','Poné a prueba tu preparación sin ver las respuestas hasta el final.')}${state.exam?examView():`<div class="columns"><div class="panel"><div class="eyebrow">CONFIGURAR SIMULACRO</div><h2>¿Listo para rendir?</h2><p class="muted">Un examen cronometrado sobre los cinco temas, con preguntas mezcladas y revisión final.</p><div class="space"></div><label class="muted" for="examCount">Cantidad de preguntas</label><div class="space"></div><select class="select" id="examCount"><option value="10">10 preguntas · 15 minutos</option><option value="20" selected>20 preguntas · 30 minutos</option><option value="30">30 preguntas · 45 minutos</option><option value="${QUESTIONS.length}">Todas (${QUESTIONS.length}) · 90 minutos</option></select><div class="space"></div><button class="btn primary" id="startExam">${icon('clock',16)} Empezar simulacro</button></div><div class="panel"><b>Reglas</b><div class="kv"><span class="muted">Modalidad</span><b>Opción múltiple</b></div><div class="kv"><span class="muted">Corrección</span><b>Al terminar</b></div><div class="kv"><span class="muted">Tiempo</span><b>Limitado</b></div><p class="notice">Se trata de una práctica basada en los archivos, no de preguntas oficiales.</p></div></div>`}`}
 let timer=null;
 function startExam(){if(activeSession()){resumeSession();return}const n=+$('examCount').value;state.exam={ids:adaptive(QUESTIONS,n),at:0,answers:{},end:Date.now()+(n===QUESTIONS.length?90:n*1.5)*60000,finished:false};render()}
 function finishExam(){const ex=state.exam;if(!ex||ex.finished)return;ex.finished=true;ex.paused=false;let correct=0,omitted=0;const units={};ex.ids.forEach(id=>{const x=QUESTIONS.find(q=>q.id===id),missing=ex.answers[id]===undefined,good=!missing&&ex.answers[id]===x.answer;correct+=Number(good);omitted+=Number(missing);record(x,good,missing);const u=units[x.topic]||(units[x.topic]={total:0,right:0,omitted:0});u.total++;u.right+=Number(good);u.omitted+=Number(missing)});ex.right=correct;ex.omitted=omitted;state.sessions.push({time:Date.now(),score:Math.round(correct/ex.ids.length*100),total:ex.ids.length,right:correct,omitted,units});save();render()}
 function examView(){let e=state.exam;if(e.finished)return `<div class="panel" style="text-align:center"><span class="eyebrow">RESULTADO DEL SIMULACRO</span><div class="results" style="color:${e.right/e.ids.length>=.7?'var(--green)':'var(--amber)'}">${Math.round(e.right/e.ids.length*100)}%</div><h2>${e.right} de ${e.ids.length} correctas</h2><p class="muted">Revisá cuáles eran las respuestas correctas y por qué.</p><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0"><button class="btn primary" id="repeatExam">Nuevo simulacro</button><button class="btn" data-route="errores">Practicar errores</button></div></div><div style="height:15px"></div>${e.ids.map((id,i)=>{let x=QUESTIONS.find(q=>q.id===id),answer=e.answers[id];return `<div class="note"><div class="eyebrow">Pregunta ${i+1} · ${topic(x.topic).name}</div><h3 style="margin:7px 0">${esc(x.q)}</h3><p style="color:${answer===x.answer?'var(--green)':'var(--red)'}">Tu respuesta: ${answer===undefined?'Omitida (incorrecta)':esc(x.options[answer])}</p><p style="color:var(--green)">Correcta: ${esc(x.options[x.answer])}</p><p>${esc(x.why)}</p><div class="source" style="margin-top:8px">${esc(x.source)}</div></div>`}).join('')}`;let x=QUESTIONS.find(q=>q.id===e.ids[e.at]);return `<div class="columns"><div class="panel"><div class="kv" style="padding-top:0"><span class="pill">${topic(x.topic).name}</span><span class="examtime" id="timer">--:--</span></div><div class="progress" style="margin-top:13px"><div style="width:${(e.at+1)/e.ids.length*100}%"></div></div><div class="source" style="margin-top:12px">Pregunta ${e.at+1} de ${e.ids.length} · ${Object.keys(e.answers).length} respondidas</div><h2 class="question">${esc(x.q)}</h2>${x.options.map((o,i)=>`<button class="answer ${e.answers[x.id]===i?'selected':''}" data-examanswer="${i}"><span class="letter">${'ABCD'[i]}</span>${esc(o)}</button>`).join('')}<div class="footer-actions"><button class="btn ghost" id="examPrev" ${e.at===0?'disabled':''}>Anterior</button><div style="display:flex;gap:8px"><button class="btn" id="examNext" ${e.at===e.ids.length-1?'disabled':''}>Siguiente</button><button class="btn primary" id="examFinish">Finalizar</button></div></div></div><div class="panel"><b>Hoja de respuestas</b><p class="muted smalltext">Saltá a la pregunta que quieras.</p><div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">${e.ids.map((id,i)=>`<button class="tag ${e.at===i?'on':''}" data-examjump="${i}" style="background:${e.answers[id]!==undefined?'#2a315b':''}">${i+1}</button>`).join('')}</div><p class="notice">Las respuestas y explicaciones se muestran al finalizar.</p></div></div>`}
 function record(x,good,omitted=false){const v=state.hist[x.id]||{seen:0,right:0,wrong:0,lastCorrect:false};v.seen++;v.right+=Number(good);v.wrong+=Number(!good);v.lastCorrect=good;v.lastAt=Date.now();v.lastOmitted=omitted;state.hist[x.id]=v}
-function render(){if(timer){clearInterval(timer);timer=null}save();updateNav();const a=activeSession();const banner=a?`<div class="hint" style="margin-bottom:18px"><b>${a.kind==='exam'?'Simulacro':'Práctica'} ${a.value.paused?'en pausa':'en curso'}</b> · El progreso se guarda.<div class="toolbar"><button class="btn small" id="resumeSession">Continuar</button>${a.value.paused?'':'<button class="btn small" id="pauseSession">Pausar</button>'}<button class="btn small ghost" id="abandonSession">Abandonar</button></div>${a.kind==='exam'&&a.value.paused?'<span>El reloj está detenido mientras la sesión está pausada.</span>':''}</div>`:'';const pausedHere=a?.value.paused&&state.screen===a.screen;root.innerHTML=banner+(pausedHere?header('Sesión pausada','Continuá cuando estés listo.'):({home,temario,practica:practice,flash:flashcard,errores:errors,examen:exam,dashboard,emergencia:emergency,desarrollo:development})[state.screen]());if(storageFailed)root.insertAdjacentHTML('afterbegin','<div class="feedback bad" role="alert">No se pudo guardar en el navegador. Revisá el espacio disponible y los permisos de almacenamiento; no cierres esta página si necesitás conservar la sesión.</div>');bind();if(state.screen==='temario')drawNotes();if(state.exam&&!state.exam.finished&&!state.exam.paused){updateTime();if(!state.exam.finished)timer=setInterval(updateTime,1000)}}
+function render(){
+  if(timer){clearInterval(timer);timer=null}
+  save();updateNav();
+  const a=activeSession();
+  const onSession=a&&state.screen===a.screen&&!a.value.paused;
+  const banner=a?`<div class="session-bar">
+    <span><strong>${a.kind==='exam'?'Simulacro':'Práctica'}</strong> · ${a.value.paused?'En pausa':'En curso'}</span>
+    <div class="session-actions">
+      ${onSession?'<button class="btn ghost small" id="pauseSession">'+icon('pause',14)+' Pausar</button>':'<button class="btn small" id="resumeSession">Continuar</button>'}
+      <details><summary aria-label="Opciones de la sesión">${icon('more',18)}</summary><div class="session-menu">
+        <button class="btn ghost small" id="abandonSession">Abandonar sesión</button>
+        <p>${a.kind==='exam'&&a.value.paused?'El reloj está detenido.':'El progreso se guarda en este navegador.'}</p>
+      </div></details>
+    </div>
+  </div>`:'';
+  const pausedHere=a?.value.paused&&state.screen===a.screen;
+  root.innerHTML=banner+(pausedHere?`<div class="empty">${icon('pause',28)}${header('Un momento de pausa.','La sesión está guardada. Continuá cuando estés listo.')}</div>`:({home,temario,practica:practice,flash:flashcard,errores:errors,examen:exam,dashboard,emergencia:emergency,desarrollo:development,materiales})[state.screen]());
+  if(storageFailed)root.insertAdjacentHTML('afterbegin','<div class="feedback bad" role="alert">No se pudo guardar en el navegador. Revisá el espacio disponible y los permisos de almacenamiento; no cierres esta página si necesitás conservar la sesión.</div>');
+  bind();
+  if(state.screen==='temario')drawNotes();
+  if(state.exam&&!state.exam.finished&&!state.exam.paused){updateTime();if(!state.exam.finished)timer=setInterval(updateTime,1000)}
+}
 function updateTime(){const e=state.exam;if(!e||e.finished||e.paused)return;const left=Math.max(0,Math.ceil((e.end-Date.now())/1000)),c=$('timer');if(c)c.textContent=`${String(Math.floor(left/60)).padStart(2,'0')}:${String(left%60).padStart(2,'0')}`;if(!left)finishExam()}
 function bind(){document.querySelectorAll('[data-route]').forEach(b=>b.onclick=()=>go(b.dataset.route));document.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>{state.topic=b.dataset.topic;go('temario')});document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{state.topic=b.dataset.filter;render()});document.querySelectorAll('[data-flashtopic]').forEach(b=>b.onclick=()=>{state.flashTopic=b.dataset.flashtopic;state.flashIndex=0;state.flashBack=false;render()});const find=id=>$(id);if(find('startNow'))find('startNow').onclick=()=>go('practica');if(find('readNow'))find('readNow').onclick=()=>go('temario');if(find('termSearch'))find('termSearch').oninput=e=>{state.search=e.target.value;drawNotes()};if(find('startPractice'))find('startPractice').onclick=()=>beginQuiz();if(find('retryWrong'))find('retryWrong').onclick=()=>{state.screen='practica';beginQuiz('errors',wrongIds())};if(find('again'))find('again').onclick=()=>beginQuiz();document.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{if(!state.quiz||state.quiz.checked||state.quiz.paused)return;state.quiz.chosen=+b.dataset.answer;render()});if(find('leavePractice'))find('leavePractice').onclick=()=>{state.quiz=null;render()};if(find('checkOrNext'))find('checkOrNext').onclick=()=>{let v=state.quiz,x=QUESTIONS.find(q=>q.id===v.ids[v.at]);if(!v.checked){v.checked=true;let good=v.chosen===x.answer;v.right+=Number(good);v.wrong+=Number(!good);record(x,good)}else{v.at++;v.checked=false;v.chosen=null}render()};if(find('flip'))find('flip').onclick=()=>{state.flashBack=!state.flashBack;render()};if(find('flashPrev'))find('flashPrev').onclick=()=>{let len=FLASH.filter(f=>state.flashTopic==='all'||f[0]===state.flashTopic).length;state.flashIndex=(state.flashIndex+len-1)%len;state.flashBack=false;render()};if(find('flashNext'))find('flashNext').onclick=()=>{state.flashIndex++;state.flashBack=false;render()};if(find('startExam'))find('startExam').onclick=startExam;if(find('examFinish'))find('examFinish').onclick=()=>{let missing=state.exam.ids.length-Object.keys(state.exam.answers).length;if(missing&&!confirm(`Te faltan ${missing} preguntas. ¿Finalizar igualmente?`))return;finishExam()};if(find('repeatExam'))find('repeatExam').onclick=()=>{state.exam=null;render()};if(find('examNext'))find('examNext').onclick=()=>{state.exam.at++;render()};if(find('examPrev'))find('examPrev').onclick=()=>{state.exam.at--;render()};document.querySelectorAll('[data-examjump]').forEach(b=>b.onclick=()=>{state.exam.at=+b.dataset.examjump;render()});document.querySelectorAll('[data-examanswer]').forEach(b=>b.onclick=()=>{let ex=state.exam;if(!ex||ex.finished||ex.paused)return;if(Date.now()>=ex.end){finishExam();return}ex.answers[ex.ids[ex.at]]=+b.dataset.examanswer;render()})}
 // Persistencia compatible con los historiales v1; las sesiones nuevas son v2.
@@ -66,13 +233,13 @@ function adaptive(pool,n=pool.length){const groups=TOPICS.map(t=>shuffle(pool.fi
 
 const originalPractice=practice,originalQuizView=quizView;
 practice=function(){return originalPractice().replace('Podés salir y volver a empezar cuando quieras.','Tu ronda se guarda. Al cambiar de sección se pausa; podés continuar o abandonarla.').replace('Las preguntas salen mezcladas para que practiques sin memorizar el orden.','Se priorizan preguntas nuevas, errores y unidades débiles, con revisiones espaciadas y equilibrio entre unidades.')};
-quizView=function(){const q=state.quiz;let html=originalQuizView();if(q.which==='emergency')html='<div class="hint">Repaso de emergencia · 20 preguntas adaptativas con explicación inmediata</div><div class="space"></div>'+html;if(q.at>=q.ids.length){const weak=TOPICS.map(t=>({t,ids:q.ids.filter(id=>QUESTIONS.find(x=>x.id===id).topic===t.id)})).filter(u=>u.ids.some(id=>q.answers?.[id]===false));html+=`<div class="panel" style="margin-top:15px"><h2>Áreas para reforzar</h2>${weak.length?weak.map(u=>`<p>${esc(u.t.name)}: ${u.ids.filter(id=>q.answers?.[id]===false).length} errores. Repasá el temario y su explicación.</p>`).join(''):'<p>Sin errores en esta ronda. Continuá con revisiones espaciadas.</p>'}</div>`}return html};
+quizView=function(){const q=state.quiz;let html=originalQuizView();if(q.which==='emergency')html='<div class="round-context">Repaso de emergencia · 20 preguntas</div>'+html;if(q.at>=q.ids.length){const weak=TOPICS.map(t=>({t,ids:q.ids.filter(id=>QUESTIONS.find(x=>x.id===id).topic===t.id)})).filter(u=>u.ids.some(id=>q.answers?.[id]===false));html+=`<div class="panel" style="margin-top:15px"><h2>Áreas para reforzar</h2>${weak.length?weak.map(u=>`<p>${esc(u.t.name)}: ${u.ids.filter(id=>q.answers?.[id]===false).length} errores. Repasá el temario y su explicación.</p>`).join(''):'<p>Sin errores en esta ronda. Continuá con revisiones espaciadas.</p>'}</div>`}return html};
 function dashboard(){return `${header('Rendimiento académico','Resultados registrados en este navegador; los conceptos dominados son autoevaluados.')}<div class="grid2">${TOPICS.map(t=>{const u=unitStats(t.id);return `<div class="panel"><span class="pill">${esc(t.name)}</span><div class="kv">Preguntas respondidas <b>${u.answered}/${QUESTIONS.filter(q=>q.topic===t.id).length}</b></div><div class="kv">Aciertos (${u.attempts} intentos) <b>${u.rate===null?'Sin datos':Math.round(u.rate*100)+'%'}</b></div><div class="kv">Errores pendientes <b>${u.errors}</b></div><div class="kv">Conceptos dominados <b>${u.mastered}/${DEVELOPMENT.filter(d=>d.topic===t.id).length}</b></div><p class="hint">${u.rate===null?'Empezá por las preguntas sin practicar.':u.errors?'Revisá las explicaciones de tus errores y practicá esta unidad.':u.rate<.7?'Reforzá las definiciones del temario.':'Volvé a revisar esta unidad después de un intervalo.'}</p></div>`}).join('')}</div><div class="sectionline"><h2>Evolución entre simulacros</h2></div><div class="panel">${state.sessions.length?state.sessions.map((s,i)=>`<div class="listrow">${new Date(s.time).toLocaleString('es-PY')} · ${s.score}% · ${s.total} preguntas${s.omitted===undefined?' · Registro anterior sin detalle de omisiones':` · ${s.omitted} omitidas`}${i?` · Variación: ${s.score-state.sessions[i-1].score>0?'+':''}${s.score-state.sessions[i-1].score} puntos porcentuales`:''}${s.units?`<div class="source">${Object.entries(s.units).map(([id,u])=>`${esc(topic(id).name)}: ${u.right}/${u.total}`).join(' · ')}</div>`:''}</div>`).join(''):'Todavía no finalizaste simulacros.'}<p class="notice">Los tamaños y preguntas pueden variar: la diferencia de puntaje no demuestra por sí sola una mejora de aprendizaje.</p></div>`}
 function emergency(){return `${header('Repaso de emergencia','Una ronda de 20 preguntas: nuevas, falladas y unidades débiles.')}<div class="panel"><p>Sin repeticiones dentro de la ronda, con representación equilibrada de las cinco unidades. Leé la explicación después de cada respuesta.</p><button class="btn primary" id="startEmergency">${icon('zap')} Iniciar repaso de 20 preguntas</button></div>`}
 const DEVELOPMENT=FLASH.map((f,i)=>({id:'d'+i,topic:f[0],title:f[1],model:f[2],concepts:({0:['organización','bienes|servicios','necesidades'],1:['talleres','gremios'],2:['mecanización','fábricas','serie'],3:['globalización','automatización','cliente'],4:['prever','organizar','dirigir','coordinar','controlar'],5:['planeación','organización','ejecución','control'],6:['organismo social'],7:['distinta|diferente','técnicas|contables'],8:['simultáneamente|simultáneas|coexisten'],9:['niveles','cuerpo administrativo'],10:['gradual','economía formal'],11:['registro','licencias','seguridad social','tributario|tributarias','laboral|laborales'],12:['informal','formal'],13:['financiación','mercados','sanciones','empleo'],14:['registra','clasifica','resume','operaciones'],15:['confiable','oportuna','verificable'],16:['decisiones','fiscales|tributarias'],17:['información financiera','operaciones'],18:['integra','departamentos'],19:['internet'],20:['contraseñas','permisos'],21:['supervisar','principios contables']})[i]}));
 const normalize=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
 function conceptMatches(text,concept){const value=' '+normalize(text)+' ';return concept.split('|').some(word=>value.includes(' '+normalize(word)+' '))}
-function development(){return `${header('Preguntas de desarrollo','Comparación orientativa por palabras y conceptos. No hay corrección por IA.')}<p class="hint">Escribí sin mirar. Compará luego con el modelo y verificá precisión, relaciones entre conceptos y ausencia de contradicciones. Mencionar palabras no garantiza comprender.</p>${DEVELOPMENT.map(d=>{const v=state.development[d.id]||{},matches=d.concepts.filter(c=>conceptMatches(v.text||'',c));return `<div class="note"><span class="pill">${esc(topic(d.topic).name)}</span><h3 style="margin-top:12px">Explicá: ${esc(d.title)}</h3><label for="text-${d.id}" class="source">Tu respuesta</label><textarea id="text-${d.id}" data-draft="${d.id}" rows="4" class="search">${esc(v.text||'')}</textarea><button class="btn small" data-review="${d.id}">Comparar con el modelo</button>${v.reviewed?`<div class="feedback"><b>Respuesta modelo</b><p>${esc(d.model)}</p><p>Conceptos obligatorios:</p><ul>${d.concepts.map(c=>`<li>${conceptMatches(v.text||'',c)?'Detectado':'Revisar'}: ${esc(c.split('|').join(' / '))}</li>`).join('')}</ul><p>${matches.length}/${d.concepts.length} coincidencias orientativas. Revisá sinónimos, negaciones y sentido de tu respuesta.</p><p>¿Explicaste todos los conceptos con tus palabras? ¿Tu respuesta coincide en significado con el modelo? ¿Podrías dar un ejemplo?</p><label><input type="checkbox" data-mastery="${d.id}" ${v.mastered?'checked':''}> Puedo explicar este concepto sin ayuda</label><div class="source">Fuente declarada: ${esc(topic(d.topic).source)}. Referencia de estudio: flashcard «${esc(d.title)}». Documento original no incluido; página sin verificar.</div></div>`:''}</div>`}).join('')}`}
+function development(){return `${header('Preguntas de desarrollo','Comparación orientativa por palabras y conceptos. No hay corrección por IA.')}<div class="toolbar" aria-label="Filtrar desarrollo por unidad"><button class="tag ${ui.developmentTopic==='all'?'on':''}" data-devtopic="all">Todas las unidades</button>${TOPICS.map(t=>`<button class="tag ${ui.developmentTopic===t.id?'on':''}" data-devtopic="${t.id}">${esc(t.name)}</button>`).join('')}</div><p class="hint">Escribí sin mirar. Compará luego con el modelo y verificá precisión, relaciones entre conceptos y ausencia de contradicciones. Mencionar palabras no garantiza comprender.</p>${DEVELOPMENT.filter(d=>ui.developmentTopic==='all'||d.topic===ui.developmentTopic).map(d=>{const v=state.development[d.id]||{},matches=d.concepts.filter(c=>conceptMatches(v.text||'',c));return `<div class="note"><span class="pill">${esc(topic(d.topic).name)}</span><h3 style="margin-top:12px">Explicá: ${esc(d.title)}</h3><label for="text-${d.id}" class="source">Tu respuesta</label><textarea id="text-${d.id}" data-draft="${d.id}" rows="4" class="search">${esc(v.text||'')}</textarea><button class="btn small" data-review="${d.id}">Comparar con el modelo</button>${v.reviewed?`<div class="feedback"><b>Respuesta modelo</b><p>${esc(d.model)}</p><p>Conceptos obligatorios:</p><ul>${d.concepts.map(c=>`<li>${conceptMatches(v.text||'',c)?'Detectado':'Revisar'}: ${esc(c.split('|').join(' / '))}</li>`).join('')}</ul><p>${matches.length}/${d.concepts.length} coincidencias orientativas. Revisá sinónimos, negaciones y sentido de tu respuesta.</p><p>¿Explicaste todos los conceptos con tus palabras? ¿Tu respuesta coincide en significado con el modelo? ¿Podrías dar un ejemplo?</p><label><input type="checkbox" data-mastery="${d.id}" ${v.mastered?'checked':''}> Puedo explicar este concepto sin ayuda</label><div class="source">Fuente declarada: ${esc(topic(d.topic).source)}. Referencia de estudio: flashcard «${esc(d.title)}». Documento original no incluido; página sin verificar.</div></div>`:''}</div>`}).join('')}`}
 const originalBind=bind;
 bind=function(){originalBind();const on=(id,fn)=>{if($(id))$(id).onclick=fn};on('startEmergency',()=>beginQuiz('emergency',QUESTIONS));on('leavePractice',()=>{pauseSession();go('home')});on('again',()=>{const which=state.quiz.which;state.quiz=null;beginQuiz(which,which==='emergency'?QUESTIONS:null)});on('checkOrNext',()=>{const v=state.quiz;if(!v||v.paused||v.at>=v.ids.length)return;const x=QUESTIONS.find(q=>q.id===v.ids[v.at]);if(!v.checked){if(v.chosen===null)return;v.checked=true;const good=v.chosen===x.answer;v.right+=Number(good);v.wrong+=Number(!good);(v.answers||(v.answers={}))[x.id]=good;record(x,good)}else{v.at++;v.checked=false;v.chosen=null}render()});document.querySelectorAll('[data-draft]').forEach(el=>el.oninput=()=>{const v=state.development[el.dataset.draft]||(state.development[el.dataset.draft]={});v.text=el.value;v.mastered=false;v.reviewed=false;const note=el.closest('.note'),feedback=note.querySelector('.feedback');if(feedback)feedback.remove();save()});document.querySelectorAll('[data-review]').forEach(b=>b.onclick=()=>{const v=state.development[b.dataset.review]||(state.development[b.dataset.review]={});v.reviewed=true;render();$('text-'+b.dataset.review).focus()});document.querySelectorAll('[data-mastery]').forEach(b=>b.onchange=()=>{state.development[b.dataset.mastery].mastered=b.checked;save()});on('resumeSession',resumeSession);on('pauseSession',()=>{pauseSession();render()});on('abandonSession',abandonSession)};
 
@@ -82,6 +249,501 @@ const baseDrawNotes=drawNotes;
 drawNotes=function(){baseDrawNotes();const area=$('notes');if(!area)return;const entries=TOPICS.filter(t=>(state.topic==='all'||t.id===state.topic)&&(!state.search.trim()||normalize(SIMPLE_NOTES[t.id]+' '+t.name).includes(normalize(state.search))));if(entries.length)area.insertAdjacentHTML('beforeend',`<div class="sectionline"><h2>En palabras simples</h2></div>${entries.map(t=>`<div class="note"><h3>${esc(t.name)}</h3><p>${esc(SIMPLE_NOTES[t.id])}</p><div class="source">Paráfrasis didáctica del resumen disponible. Fuente declarada: ${esc(t.source)}; documento original sin verificar.</div></div>`).join('')}`)};
 window.addEventListener('pagehide',save);
 document.querySelector('.brandicon').innerHTML=icon('book',24);
+
+// Preferencias visuales independientes del historial académico.
+const ui={theme:'dark',developmentTopic:'all',summaryOpen:false};
+try{ui.theme=localStorage.getItem('repaso-unibe-theme')==='light'?'light':'dark'}catch(e){}
+function setTheme(theme){
+  ui.theme=theme;
+  if(!document.documentElement)return;
+  document.documentElement.setAttribute('data-theme',theme);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='light'?'#f7f5ee':'#181b1a');
+  const button=$('themeToggle');
+  if(button){button.innerHTML=icon(theme==='light'?'moon':'sun',18);button.setAttribute('aria-label',theme==='light'?'Activar modo oscuro':'Activar modo claro');button.title=theme==='light'?'Modo oscuro':'Modo claro'}
+}
+setTheme(ui.theme);
+const studyRender=render;
+render=function(){
+  // El verificador de lógica usa un DOM mínimo; la presentación requiere DOM real.
+  if(!document.body)return studyRender();
+  const focused=document.activeElement;
+  const filterAttr=['data-filter','data-flashtopic','data-devtopic'].find(attr=>focused?.hasAttribute(attr));
+  const filterValue=filterAttr?focused.getAttribute(filterAttr):null;
+  const focusId=focused?.id;
+  const answerAttr=focused?.hasAttribute('data-answer')?'data-answer':focused?.hasAttribute('data-examanswer')?'data-examanswer':null;
+  const answerValue=answerAttr?focused.getAttribute(answerAttr):null;
+  const previousQuestion=root.querySelector('.question')?.textContent;
+  const session=activeSession();
+  const studying=!!(session&&!session.value.paused&&state.screen===session.screen);
+  document.body.dataset.screen=state.screen;
+  document.body.classList.toggle('study-focus',studying);
+  document.body.classList.remove('nav-open');
+  studyRender();
+  // Un temporizador vencido puede haber finalizado la sesión dentro del render.
+  const current=activeSession();
+  document.body.classList.toggle('study-focus',!!(current&&!current.value.paused&&state.screen===current.screen));
+  $('studyNav')?.setAttribute('aria-expanded','false');
+  root.querySelectorAll('[data-answer],[data-examanswer]').forEach(button=>{
+    button.setAttribute('aria-pressed',String(button.classList.contains('selected')));
+    if(button.classList.contains('correct'))button.setAttribute('aria-label','Respuesta correcta: '+button.textContent.trim());
+    if(button.classList.contains('wrong'))button.setAttribute('aria-label','Tu respuesta, incorrecta: '+button.textContent.trim());
+  });
+  root.querySelectorAll('[data-examjump]').forEach(button=>{
+    const index=Number(button.dataset.examjump),answered=state.exam?.answers[state.exam.ids[index]]!==undefined;
+    button.dataset.answered=String(answered);
+    button.setAttribute('aria-label',`Pregunta ${index+1}, ${answered?'respondida':'sin responder'}`);
+    if(state.exam?.at===index)button.setAttribute('aria-current','step');
+  });
+  root.querySelectorAll('.feedback:not([role="alert"])').forEach(el=>{el.setAttribute('role','status');el.setAttribute('aria-live','polite')});
+  const progress=root.querySelector('.columns .progress');
+  if(progress&&current){const value=current.value;progress.setAttribute('role','progressbar');progress.setAttribute('aria-label','Posición en la ronda');progress.setAttribute('aria-valuemin','0');progress.setAttribute('aria-valuemax',String(value.ids.length));progress.setAttribute('aria-valuenow',String(value.at+1))}
+  if(document.body.classList.contains('study-focus')){
+    const side=root.querySelector('.columns>.panel:last-child');
+    if(side){
+      const detail=document.createElement('details'),summary=document.createElement('summary'),content=document.createElement('div');
+      summary.textContent=state.screen==='examen'?'Hoja de respuestas':'Ver datos de esta ronda';
+      content.className='detail-body';
+      while(side.firstChild)content.appendChild(side.firstChild);
+      detail.append(summary,content);detail.open=ui.summaryOpen;
+      detail.ontoggle=()=>{ui.summaryOpen=detail.open};side.appendChild(detail);
+    }
+  }
+  const question=root.querySelector('.question');
+  if(question){question.setAttribute('tabindex','-1');question.id='currentQuestion'}
+  const nextQuestion=question&&previousQuestion&&question.textContent!==previousQuestion;
+  if(nextQuestion&&(focusId==='checkOrNext'||focusId==='examNext'||focusId==='examPrev'))question.focus();
+  else if(answerAttr)root.querySelector(`[${answerAttr}="${answerValue}"]`)?.focus({preventScroll:true});
+  else if(filterAttr)root.querySelector(`[${filterAttr}="${filterValue}"]`)?.focus({preventScroll:true});
+  else if(focusId&&focusId!=='termSearch'&&focused?.tagName!=='TEXTAREA')$(focusId)?.focus({preventScroll:true});
+  document.querySelectorAll('[data-devtopic]').forEach(button=>button.onclick=()=>{ui.developmentTopic=button.dataset.devtopic;render()});
+};
+if($('themeToggle'))$('themeToggle').onclick=()=>{
+  setTheme(ui.theme==='dark'?'light':'dark');
+  try{localStorage.setItem('repaso-unibe-theme',ui.theme)}catch(e){}
+};
+if($('studyNav'))$('studyNav').onclick=()=>{
+  const open=document.body.classList.toggle('nav-open');
+  $('studyNav').setAttribute('aria-expanded',String(open));
+  if(open)document.querySelector('.nav.active')?.focus();
+};
+if(document.body){
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&document.body.classList.contains('nav-open')){document.body.classList.remove('nav-open');$('studyNav').setAttribute('aria-expanded','false');$('studyNav').focus()}
+    if(event.key==='Tab'&&document.body.classList.contains('nav-open')){
+      const links=Array.from(document.querySelectorAll('.sidebar .nav'));
+      const first=links[0],last=links[links.length-1];
+      if(event.shiftKey&&(document.activeElement===first||!document.querySelector('.sidebar').contains(document.activeElement))){event.preventDefault();last?.focus()}
+      else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus()}
+    }
+  });
+  document.addEventListener('click',event=>{
+    if(document.body.classList.contains('nav-open')&&!event.target.closest('.sidebar')&&!event.target.closest('#studyNav')){document.body.classList.remove('nav-open');$('studyNav').setAttribute('aria-expanded','false')}
+  });
+}
+
+if($('studyNav'))$('studyNav').innerHTML=icon('menu',16)+' Navegación';
+// Inventario del curso 1166 consultado el 1 de noviembre de 2026.
+// Solo enlaces públicos del recurso y contexto académico; sin datos de la cuenta.
+const COURSE_MATERIALS=[
+  {
+    "number": 0,
+    "title": "Recursos generales",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20512",
+    "resources": [
+      {
+        "title": "Avisos",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119037",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Foro de Novedades",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119039",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Foro de Consultas",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119040",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Foro de Presentación",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119041",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Foro de Recreo",
+        "url": "https://ad.unibe.edu.py/mod/forum/view.php?id=119042",
+        "type": "Foro",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Bibliotecas Virtuales",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=119044",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Biblioteca de la UNIBE",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=119045",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Tutorial de ingreso a la Plataforma",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=119047",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Estructura y Organización de las Clases",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=119048",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Edición del Perfil",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=119049",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Introducción a la contabilidad",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20513",
+    "resources": [
+      {
+        "title": "La Contabilidad",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154549",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "la contabilidad",
+        "url": "https://ad.unibe.edu.py/virtual/mod/resource/view.php?id=160586",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Estados financieros",
+        "url": "https://ad.unibe.edu.py/virtual/mod/resource/view.php?id=154291",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La importancia de la contabilidad en una empresa",
+        "url": "https://www.youtube.com/watch?v=Oueop0T5QUE",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "La empresa",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20514",
+    "resources": [
+      {
+        "title": "bienes",
+        "url": "https://es.wikipedia.org/wiki/Bien_econ%C3%B3mico",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "servicios",
+        "url": "https://es.wikipedia.org/wiki/Servicio_(econom%C3%ADa)",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La Empresa",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=154540",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La empresa",
+        "url": "https://www.youtube.com/watch?v=l-bNSIWpGx4",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Formalización de empresas",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20515",
+    "resources": [
+      {
+        "title": "la empresa",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=153570",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La Formalización de las Empresas",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154542",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "El Sistema Comercial",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154547",
+        "type": "Enlace",
+        "status": "Acceso restringido comprobado: el PDF de destino remite a Taller de Casos I y requiere matrícula."
+      },
+      {
+        "title": "Razones para formalizar tu emprendimiento",
+        "url": "https://www.youtube.com/watch?v=ahhnrQK-_bw",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Contabilidad y gestión",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20516",
+    "resources": [
+      {
+        "title": "La Contabilidad",
+        "url": "https://virtual.unibe.edu.py/mod/url/view.php?id=171304",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "LA CONTABILIDAD : Evolucion",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=155138",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La Contabilidad",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154549",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Tarea Nº 1",
+        "url": "https://ad.unibe.edu.py/mod/assign/view.php?id=119069",
+        "type": "Actividad",
+        "status": "Consigna DOCX leída el 1 de noviembre de 2026."
+      },
+      {
+        "title": "Contabilidad: evolución",
+        "url": "https://www.youtube.com/watch?v=6rCvQRYccWA",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Administración",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20518",
+    "resources": [
+      {
+        "title": "La Administracion",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=162387",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La administración y su importancia",
+        "url": "https://www.youtube.com/watch?v=kL4h2vfZTWw",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Repaso de clases",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20519",
+    "resources": []
+  },
+  {
+    "number": 7,
+    "title": "Informática e información contable",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20521",
+    "resources": [
+      {
+        "title": "la contabilidad",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154549",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "la empresa",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=154540",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "La irrupción de la Informática en la información Contable",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=162389",
+        "type": "Enlace",
+        "status": "Acceso restringido comprobado: el PDF de destino remite a Informática Aplicada a la Contabilidad y requiere matrícula."
+      },
+      {
+        "title": "Tarea 2",
+        "url": "https://ad.unibe.edu.py/mod/assign/view.php?id=162391",
+        "type": "Actividad",
+        "status": "Consigna DOCX leída el 1 de noviembre de 2026."
+      },
+      {
+        "title": "Importancia del software contable",
+        "url": "https://www.youtube.com/watch?v=uvLAqgwhREo",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Casos prácticos de sistemas contables",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20522",
+    "resources": [
+      {
+        "title": "Creación o configuración de la empresa",
+        "url": "https://www.youtube.com/watch?v=88NfItgDX6s",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      },
+      {
+        "title": "Plan de cuentas",
+        "url": "https://www.youtube.com/watch?v=ddN9fDMoNWk",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      },
+      {
+        "title": "Cómo emitir facturas virtuales a través de Marangatu",
+        "url": "https://www.youtube.com/watch?v=oZfOh5iTVTI",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      },
+      {
+        "title": "Banco Continental: aplicación explicativa",
+        "url": "https://www.youtube.com/watch?v=NDXHd3oUzNU",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Trabajo académico de investigación",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20524",
+    "resources": [
+      {
+        "title": "EL SOFTWARE CONTABLE",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=162766",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Guia para la Elaboración del Trabajo de Investigación",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=162392",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Formato del Trabajo Academico",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=162393",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "ALZAR AQUI EL TRABAJO ACADÉMICO TERMINADO",
+        "url": "https://ad.unibe.edu.py/mod/assign/view.php?id=162395",
+        "type": "Actividad",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Software contable",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20525",
+    "resources": [
+      {
+        "title": "la contabilidad",
+        "url": "https://ad.unibe.edu.py/mod/url/view.php?id=154549",
+        "type": "Enlace",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "El Software Contable",
+        "url": "https://ad.unibe.edu.py/mod/resource/view.php?id=162766",
+        "type": "Documento",
+        "status": "Enlace identificado en Moodle; contenido pendiente de revisión."
+      },
+      {
+        "title": "Software contable",
+        "url": "https://www.youtube.com/watch?v=5PrREqQZVPU",
+        "type": "Video",
+        "status": "Enlazado desde el curso. Contenido audiovisual completo no revisado."
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Repaso y parcial ordinario",
+    "source": "https://ad.unibe.edu.py/course/section.php?id=20526",
+    "resources": []
+  }
+];
+const CLASS_GUIDES={
+  0:{summary:'Accesos del aula a comunicación, biblioteca y tutoriales de uso de la plataforma.',prompts:[]},
+  1:{summary:'La contabilidad identifica, registra, resume y presenta información económica. Los estados financieros permiten comunicar esa información a accionistas, proveedores, bancos y organismos gubernamentales.',prompts:['Explicá para qué sirven los estados financieros y quiénes utilizan la información contable.']},
+  2:{summary:'La empresa organiza recursos humanos, técnicos y financieros para producir bienes o servicios y alcanzar objetivos. El material también destaca su estructura y dirección.',prompts:['Relacioná recursos, estructura y objetivos en un ejemplo de empresa.']},
+  3:{summary:'El aula vincula la formalización con credibilidad, acceso a clientes, financiación y crecimiento. Los efectos fiscales y la separación de patrimonios dependen de la forma jurídica y de las normas aplicables; no son beneficios automáticos de cualquier registro.',prompts:['Explicá cómo la formalización puede facilitar el acceso a mercados y financiación.']},
+  4:{summary:'La introducción de esta clase se centra en contabilidad gerencial o directiva: usa información financiera, presupuestos y costos para apoyar decisiones y controlar actividades del negocio.',prompts:['¿Cómo usarías un presupuesto y la información de costos para decidir?','Consigna de la Tarea 1: explicá empresa, sociedad de consumo y competencia. La definición de sociedad de consumo no está desarrollada en los resúmenes actuales; contrastala con el material o con el docente.'],task:{title:'Tarea 1 · consigna original revisada',paragraphs:'Tres párrafos, en no más de una carilla: qué aprendí, cómo impacta en mí lo aprendido y a qué me mueve.',process:['Importancia de la contabilidad.','Origen de la empresa.','Conceptos de empresa, sociedad de consumo y competencia.','Rol del profesional en la gestión empresarial.','Beneficios de la contabilidad como herramienta de gestión.'],format:'Arial 11, interlineado 1,5 y alineación a la izquierda. Total: 5 puntos.',criteria:['Formato','Puntualidad','Comprensión de contenidos','Selección de ideas pertinentes','Vocabulario técnico'],url:'https://ad.unibe.edu.py/pluginfile.php/250138/mod_assign/introattachment/0/Tarea%201.docx?forcedownload=1'}},
+  5:{summary:'El material de lectura y el video corresponden a administración y su importancia. Para las definiciones, consultá también el temario ya disponible.',warning:'La introducción de Moodle describe registro y presentación de información económica bajo el título Administración. Parece una confusión con contabilidad; no se incorporó como definición de administración.',prompts:['Diferenciá la función administrativa de la función contable usando las definiciones del temario.']},
+  6:{summary:'El aula señala repaso de clases desarrolladas. No contiene lecturas ni videos adicionales en esta sección.',prompts:['Repasá las unidades de empresa, formalización, contabilidad y administración.']},
+  7:{summary:'La clase presenta usos de la tecnología en registros financieros, estados financieros, nómina, detección de inconsistencias y seguimiento de préstamos. También relaciona la evolución contable con el comercio, la agricultura y la industria. La automatización ayuda a reducir errores, pero requiere supervisión profesional.',prompts:['Explicá qué tareas facilita la tecnología y cuáles siguen necesitando criterio profesional.','Describí cómo podrías detectar una inconsistencia entre registros usando información del sistema.'],task:{title:'Tarea 2 · consigna original revisada',paragraphs:'Dos párrafos, en no más de una carilla. La consigna pide abordar qué aprendí, cómo impacta en mí lo aprendido y a qué me mueve.',process:['Qué facilita la tecnología en contabilidad.','Beneficios para las empresas.','Importancia de la contabilidad en los negocios.','Rol del profesional con recursos tecnológicos.','Explicar con palabras propias lo aprendido en clase.'],format:'Arial 11, interlineado 1,5 y alineación a la izquierda. Total: 5 puntos.',criteria:['Formato','Puntualidad','Selección de ideas pertinentes','Vocabulario técnico','Normativas gramaticales'],url:'https://ad.unibe.edu.py/pluginfile.php/303203/mod_assign/introattachment/0/Tarea%20N%C2%B0%202%20.docx?forcedownload=1'}},
+  8:{summary:'La clase propone observar información contable en las opciones de un sistema y demostraciones de procesos por departamentos. Incluye cuatro videos: configuración de empresa, plan de cuentas, facturas virtuales de Marangatu y una aplicación bancaria.',prompts:['Al ver configuración de empresa: identificá los datos que se solicitan y explicá para qué sirven.','Al ver plan de cuentas: anotá su organización y ejemplos que aparezcan en el video.','Al ver Marangatu: registrá la secuencia demostrada y los datos que exige. Verificá la vigencia del procedimiento antes de usarlo fuera del estudio.','Al ver la aplicación bancaria: distinguí las operaciones mostradas de las funciones de un sistema contable.'],warning:'Estas consignas orientan la observación. No son transcripciones ni procedimientos verificados de los videos.'},
+  9:{summary:'Trabajo académico de investigación: el software contable en la gestión empresarial. Moodle solicita redacción clara y precisa, investigación documental o de campo y bibliografía. Puede elaborarse en grupo, pero cada estudiante debe subir su trabajo.',prompts:['Organizá el trabajo siguiendo la guía y el formato enlazados.','Identificá las fuentes de cada afirmación y prepará la bibliografía.']},
+  10:{summary:'El software contable simplifica tareas y organiza información útil para la empresa. El documento de esta clase es la referencia ya declarada en la unidad Software contable de la web.',prompts:['Relacioná funciones, ventajas, límites y criterios para elegir un software contable.']},
+  11:{summary:'La sección indica repaso de clases desarrolladas y parcial ordinario. No publica un temario detallado del examen ni materiales adicionales.',prompts:['Usá el repaso adaptativo para detectar debilidades; el catálogo no confirma qué preguntas entrarán en el parcial.']}
+};
+const materialFilters={classNumber:'all',type:'all',search:''};
+function matchingMaterials(){
+  const query=normalize(materialFilters.search);
+  return COURSE_MATERIALS.filter(c=>materialFilters.classNumber==='all'||String(c.number)===materialFilters.classNumber).map(c=>{
+    const guide=CLASS_GUIDES[c.number];
+    const classMatch=normalize(c.title+' '+guide.summary+' '+guide.prompts.join(' ')).includes(query);
+    const resources=c.resources.filter(r=>(materialFilters.type==='all'||r.type===materialFilters.type)&&(!query||classMatch||normalize(r.title+' '+r.status).includes(query)));
+    return {...c,resources};
+  }).filter(c=>c.resources.length||(materialFilters.type==='all'&&(!query||normalize(c.title+' '+CLASS_GUIDES[c.number].summary+' '+CLASS_GUIDES[c.number].prompts.join(' ')).includes(query))));
+}
+function materialLink(url,label){return `<a class="btn small ghost" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ${icon('arrow',14)}</a>`}
+function materialsList(){
+  const classes=matchingMaterials();
+  if(!classes.length)return '<div class="empty" role="status">No hay materiales para estos filtros. Probá otra clase, tipo de recurso o búsqueda.</div>';
+  return classes.map(c=>{
+    const guide=CLASS_GUIDES[c.number];
+    const task=guide.task;
+    return `<section class="note material-class"><div class="eyebrow">${c.number?'Clase '+c.number:'Aula virtual'} · ${c.resources.length} recursos</div><h2>${esc(c.title)}</h2><p>${esc(guide.summary)}</p>${guide.warning?`<p class="hint" style="margin-top:12px">${esc(guide.warning)}</p>`:''}<p class="source">Síntesis de la sección visible del aula, consultada el 1 de noviembre de 2026.</p>${materialLink(c.source,'Ver sección en Moodle')}<details ${materialFilters.classNumber!=='all'||materialFilters.search||materialFilters.type!=='all'?'open':''}><summary style="cursor:pointer;padding:14px 0;font-weight:650">Materiales y guía de estudio</summary><div>${c.resources.map(r=>`<div class="listrow"><div class="source">${esc(r.type)}</div><h3>${esc(r.title)}</h3><p class="source">${esc(r.status)}${r.type==='Video'?' El título identifica el recurso del curso; no implica revisión de su contenido.':' Los recursos de Moodle pueden requerir iniciar sesión.'}</p>${materialLink(r.url,r.type==='Video'?'Ver video en YouTube':'Abrir recurso')}</div>`).join('')||'<p class="muted">Esta clase no publica recursos adicionales.</p>'}${guide.prompts.length?`<h3 style="margin-top:20px">Para estudiar</h3><ul>${guide.prompts.map(p=>`<li>${esc(p)}</li>`).join('')}</ul><p class="source">Guía de repaso elaborada a partir del contexto de la clase; no es una consigna de examen.</p>`:''}${task?`<div class="hint" style="margin-top:18px"><h3>${esc(task.title)}</h3><p>${esc(task.paragraphs)}</p><ul>${task.process.map(p=>`<li>${esc(p)}</li>`).join('')}</ul><p>${esc(task.format)}</p><p>Indicadores: ${esc(task.criteria.join(' · '))}.</p>${materialLink(task.url,'Leer consigna DOCX')}</div>`:''}</div></details></section>`;
+  }).join('');
+}
+function materiales(){
+  const count=COURSE_MATERIALS.reduce((n,c)=>n+c.resources.length,0);
+  return `${header('Materiales del curso','Lecturas, videos y actividades organizados por clase.')}<p class="hint">${count} referencias del aula · 11 videos · 11 clases y recursos generales. Los apuntes de esta página funcionan sin conexión; los enlaces abren Moodle o YouTube y necesitan internet. No se cargan reproductores automáticamente.</p><p class="source">Inventario consultado el 1 de noviembre de 2026. Incluir un enlace no significa haber revisado todo su contenido. No se incluyen datos personales ni entregas del estudiante.</p><div class="toolbar"><label>Clase <select id="materialClass" class="select"><option value="all">Todas las clases</option>${COURSE_MATERIALS.map(c=>`<option value="${c.number}" ${materialFilters.classNumber===String(c.number)?'selected':''}>${c.number?'Clase '+c.number:'General'} · ${esc(c.title)}</option>`).join('')}</select></label><label>Tipo <select id="materialType" class="select">${['all','Video','Documento','Enlace','Actividad','Foro'].map(t=>`<option value="${t}" ${materialFilters.type===t?'selected':''}>${t==='all'?'Todos los recursos':t}</option>`).join('')}</select></label></div><label for="materialSearch" class="source">Buscar en los materiales</label><input class="search" id="materialSearch" type="search" placeholder="Plan de cuentas, presupuesto, tarea…" value="${esc(materialFilters.search)}"><div id="materialsList" style="margin-top:24px">${materialsList()}</div>`;
+}
+const bindBeforeMaterials=bind;
+bind=function(){
+  bindBeforeMaterials();
+  const redraw=()=>{$('materialsList').innerHTML=materialsList()};
+  if($('materialSearch'))$('materialSearch').oninput=e=>{materialFilters.search=e.target.value;redraw()};
+  if($('materialClass'))$('materialClass').onchange=e=>{materialFilters.classNumber=e.target.value;redraw()};
+  if($('materialType'))$('materialType').onchange=e=>{materialFilters.type=e.target.value;redraw()};
+};
 
 render();
 </script></body></html>
