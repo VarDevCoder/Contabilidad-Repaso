@@ -54,18 +54,18 @@ SOFTWARE.
 /* Sistema editorial: superficies planas, escala de 4 px, un solo acento. */
 :root {
   color-scheme: dark;
-  --bg:#181b1a; --side:#141716; --panel:#1e2220; --panel2:#252a27;
-  --line:#353d38; --text:#eeeee7; --muted:#a8b2aa; --a:#a8c5ae; --a2:#bdd5c1;
-  --green:#a8ceb2; --red:#eeaba5; --amber:#dfc393; --accent-bg:#2b3830;
-  --button-text:#18241c; --correct-bg:#24372b; --wrong-bg:#3b2928;
+  --bg:#18191c; --side:#141518; --panel:#1e2024; --panel2:#272a30;
+  --line:#3b3f48; --text:#eeeef0; --muted:#a9adb7; --a:#a6bfff; --a2:#c0d1ff;
+  --green:#a8ceb2; --red:#eeaba5; --amber:#dfc393; --accent-bg:#283247;
+  --button-text:#172238; --correct-bg:#24372b; --wrong-bg:#3b2928;
   --font:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
   --editorial:Georgia,'Times New Roman',serif;
 }
 :root[data-theme="light"] {
   color-scheme:light;
-  --bg:#f7f5ee; --side:#eeece4; --panel:#fffdf7; --panel2:#eae8df;
-  --line:#d5d6cc; --text:#262e28; --muted:#5e685f; --a:#355d42; --a2:#355d42;
-  --green:#30613d; --red:#a23831; --amber:#78541d; --accent-bg:#e2eade;
+  --bg:#f7f6f2; --side:#eeede9; --panel:#fffefb; --panel2:#e8e8e5;
+  --line:#d1d3d9; --text:#272b33; --muted:#626772; --a:#375892; --a2:#375892;
+  --green:#30613d; --red:#a23831; --amber:#78541d; --accent-bg:#e7edf8;
   --button-text:#fffdf7; --correct-bg:#e6eee1; --wrong-bg:#f5e5df;
 }
 *{box-sizing:border-box}
@@ -257,7 +257,7 @@ function setTheme(theme){
   ui.theme=theme;
   if(!document.documentElement)return;
   document.documentElement.setAttribute('data-theme',theme);
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='light'?'#f7f5ee':'#181b1a');
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='light'?'#f7f6f2':'#18191c');
   const button=$('themeToggle');
   if(button){button.innerHTML=icon(theme==='light'?'moon':'sun',18);button.setAttribute('aria-label',theme==='light'?'Activar modo oscuro':'Activar modo claro');button.title=theme==='light'?'Modo oscuro':'Modo claro'}
 }
