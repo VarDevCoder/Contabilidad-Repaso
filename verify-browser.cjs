@@ -45,7 +45,7 @@ async function main(){
     }
     for(const width of [320,390,768,1440]){
       await viewport(width);
-      for(const screen of ['home','temario','practica','flash','errores','examen','dashboard','emergencia','desarrollo']){
+      for(const screen of ['home','temario','practica','flash','errores','examen','dashboard','emergencia','desarrollo','materiales']){
         await evaluate(`go('${screen}')`);
         const layout=await evaluate("({width:innerWidth,scroll:document.documentElement.scrollWidth,screen:state.screen})");
         assert.ok(layout.scroll<=layout.width,`${theme} ${width} ${screen}: desbordamiento horizontal`);

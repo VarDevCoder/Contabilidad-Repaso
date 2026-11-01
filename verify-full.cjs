@@ -9,6 +9,17 @@ async function studyFlow(width,touch){
       for(const screen of ['materiales','temario','practica','flash','errores','examen','dashboard','emergencia','desarrollo','home'])await q.route(screen);
       assert.equal(await q.evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
     });
+    await check(`Materiales: filtros nativos, búsqueda y apertura de enlaces ${width}px`,async()=>{
+      await q.route('materiales');await q.select('#materialType','Video');assert.equal(await q.evaluate("document.querySelectorAll('#materialsList .listrow').length"),11);
+      await q.select('#materialClass','8');assert.equal(await q.evaluate("document.querySelectorAll('#materialsList .listrow').length"),4);
+      await q.type('#materialSearch','xyzsinresultado');assert.ok(await q.evaluate("document.querySelector('#materialsList').textContent.includes('No hay materiales')"));
+      await q.type('#materialSearch','');await q.select('#materialClass','all');await q.select('#materialType','all');await q.click('.material-class details>summary');
+      assert.equal(await q.evaluate("document.querySelector('.material-class details').open"),true);
+      await q.click('.material-class>a');
+      const targets=(await q.send('Target.getTargets',{},true)).targetInfos.filter(t=>t.browserContextId===q.contextId);
+      assert.ok(targets.some(t=>t.targetId!==q.targetId&&t.url.startsWith('https://ad.unibe.edu.py/')),'El enlace debe abrir Moodle en otra pestaña');
+      for(const target of targets.filter(t=>t.targetId!==q.targetId))await q.send('Target.closeTarget',{targetId:target.targetId},true);
+    });
     await check(`Práctica completa de 57 preguntas ${width}px; aciertos/errores, recarga y pausa`,async()=>{
       await q.route('practica');await q.click(await q.evaluate("!!document.querySelector('#again')")?'#again':'#startPractice');
       assert.equal(await q.evaluate("document.querySelector('#checkOrNext').disabled"),true);
@@ -94,6 +105,35 @@ async function exams(){
 async function storage(){
   let q=await BrowserQA.open({init:"Storage.prototype.setItem=function(){throw new DOMException('Quota exceeded','QuotaExceededError')}"});
   try{await check('Almacenamiento bloqueado: aviso visible y práctica utilizable',async()=>{assert.ok(await q.evaluate("document.querySelector('[role=alert]').textContent.includes('No se pudo guardar')"));await q.route('practica');await q.click('#startPractice');await q.click('[data-answer="0"]');await q.click('#checkOrNext');assert.equal(await q.evaluate('done()'),1);assert.deepEqual(q.errors,[])})}finally{await q.close()}
+  const corrupt='{progreso incompleto';
+  q=await BrowserQA.open({init:`localStorage.setItem('repaso-unibe-v1',${JSON.stringify(corrupt)})`});
+  try{await check('Progreso ilegible: copia de recuperación antes de escribir',async()=>{assert.equal(await q.evaluate(`Object.keys(localStorage).filter(k=>k.startsWith('repaso-unibe-recovery-')).some(k=>localStorage.getItem(k)===${JSON.stringify(corrupt)})`),true,'No sobrescribir datos ilegibles sin resguardo');assert.ok(await q.evaluate("document.querySelector('[role=alert]')?.textContent.includes('recuperación')"));assert.deepEqual(q.errors,[])})}finally{await q.close()}
+  q=await BrowserQA.open({init:`localStorage.setItem('repaso-unibe-v1',${JSON.stringify(corrupt)});Storage.prototype.setItem=function(){throw new DOMException('Quota exceeded','QuotaExceededError')}`});
+  try{await check('Respaldo imposible: el dato original queda sin sobrescribir',async()=>{assert.equal(await q.evaluate("localStorage.getItem('repaso-unibe-v1')"),corrupt);await q.route('temario');assert.equal(await q.evaluate("localStorage.getItem('repaso-unibe-v1')"),corrupt);assert.ok(await q.evaluate("document.querySelector('[role=alert]').textContent.includes('sin sobrescribir')"));assert.deepEqual(q.errors,[])})}finally{await q.close()}
 }
-async function main(){await studyFlow(1440,false);await studyFlow(390,true);await exams();await storage();console.log(`PASS TOTAL: ${results.length} escenarios de aceptación con entrada de mouse/táctil/teclado y perfiles efímeros.`)}
+async function compact(){
+  const q=await BrowserQA.open({width:320,touch:true});
+  try{
+    await check('320px: las 57 preguntas con selección, corrección y explicación en ambos temas',async()=>{
+      const failures=await q.evaluate(`(()=>{const errors=[];for(const theme of ['dark','light']){setTheme(theme);for(const question of QUESTIONS){for(const checked of [false,true]){state.screen='practica';state.quiz={ids:[question.id],at:0,chosen:question.answer,checked,right:checked?1:0,wrong:0,which:'practice',answers:{}};render();if(document.documentElement.scrollWidth>innerWidth)errors.push(theme+':'+question.id+':'+checked)}}}return errors})()`);
+      assert.deepEqual(failures,[]);
+    });
+    await check('Simulacro táctil a 320px: selección, hoja de 57 respuestas, salto, pausa y abandono',async()=>{
+      await q.evaluate("state.quiz=null;state.exam=null;go('examen')");await q.select('#examCount','57');await q.click('#startExam');
+      await q.click('[data-examanswer="0"]');await q.click('.columns>.panel:last-child>details>summary');await q.click('[data-examjump="56"]');assert.equal(await q.evaluate('state.exam.at'),56);
+      await q.click('#examPrev');assert.equal(await q.evaluate('state.exam.at'),55);await q.click('#examNext');assert.equal(await q.evaluate('state.exam.at'),56);
+      await q.route('materiales');assert.equal(await q.evaluate('state.exam.paused'),true);await q.click('#resumeSession');await q.reload();assert.equal(await q.evaluate('state.exam.at'),56);
+      await q.click('.session-bar summary');await q.dialog('#abandonSession',false);assert.ok(await q.evaluate('activeSession()'));await q.dialog('#abandonSession',true);assert.equal(await q.evaluate('activeSession()'),null);
+    });
+    assert.deepEqual(q.errors,[]);
+  }finally{await q.close()}
+}
+async function offline(){
+  let q=await BrowserQA.open();
+  try{await check('Sesión HTTP ya abierta: estudio y guardado sin red',async()=>{await q.send('Network.emulateNetworkConditions',{offline:true,latency:0,downloadThroughput:0,uploadThroughput:0});await q.route('practica');await q.click('#startPractice');await q.click('[data-answer="0"]');await q.click('#checkOrNext');assert.equal(await q.evaluate('done()'),1);assert.equal(await q.evaluate('JSON.parse(localStorage.getItem("repaso-unibe-v1")).quiz.checked'),true);assert.deepEqual(q.errors,[])})}finally{await q.close()}
+  const fileUrl=require('node:url').pathToFileURL(require('node:path').resolve('index.html')).href;
+  q=await BrowserQA.open({url:fileUrl});
+  try{await check('HTML local: apertura directa, recarga sin red y progreso persistente',async()=>{await q.send('Network.emulateNetworkConditions',{offline:true,latency:0,downloadThroughput:0,uploadThroughput:0});await q.route('practica');await q.click('#startPractice');await q.click('[data-answer="0"]');await q.click('#checkOrNext');await q.reload();assert.equal(await q.evaluate('state.quiz.checked'),true);assert.equal(await q.evaluate('done()'),1);await q.route('materiales');assert.equal(await q.evaluate("document.querySelectorAll('.material-class').length"),12);assert.deepEqual(q.errors,[])})}finally{await q.close()}
+}
+async function main(){if(process.argv.includes('--storage'))await storage();else{await studyFlow(1440,false);await studyFlow(390,true);await exams();await storage();await compact();await offline()}console.log(`PASS TOTAL: ${results.length} escenarios de aceptación con entrada de mouse/táctil/teclado y perfiles efímeros.`)}
 main().catch(error=>{console.error(error);process.exit(1)});

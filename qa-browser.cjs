@@ -36,6 +36,8 @@ class BrowserQA{
     assert.ok(await this.evaluate(`document.querySelector(${JSON.stringify(selector)}).contains(document.elementFromPoint(${rect.x},${rect.y}))`),'Control tapado: '+selector);
     if(this.touch){await this.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[rect]});await this.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]})}
     else{await this.send('Input.dispatchMouseEvent',{type:'mouseMoved',...rect});await this.send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...rect});await this.send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,...rect})}
+    // Un enlace externo puede activar otra pestaña y suspender requestAnimationFrame.
+    await this.send('Page.bringToFront');
     await this.evaluate('new Promise(resolve=>requestAnimationFrame(resolve))');
   }
   async key(key,code,keyCode,modifiers=0){for(const type of ['keyDown','keyUp'])await this.send('Input.dispatchKeyEvent',{type,key,code,windowsVirtualKeyCode:keyCode,modifiers})}
