@@ -1,5 +1,17 @@
 # Contabilidad UNIBE — Repaso
 
+## Materiales de Moodle
+
+La sección **Materiales** reúne 45 referencias observadas en el curso de Contabilidad (1166) el 1 de noviembre de 2026: 11 videos, lecturas, actividades, foros, biblioteca y tutoriales. Se organizan por las 11 clases y una sección general, con filtros por clase, tipo y texto. Las clases de repaso sin recursos también aparecen. Los enlaces repetidos dentro de una clase se muestran una sola vez.
+
+Incluye síntesis de las introducciones visibles, guías de observación y las consignas DOCX revisadas de las tareas 1 y 2. El temario, las 57 preguntas y las 22 flashcards originales se conservan. Los videos se enlazan, sin cargar reproductores o scripts externos automáticamente; verlos requiere internet. Los materiales de Moodle pueden requerir sesión.
+
+Cada recurso indica su alcance de revisión. El PDF de «El Sistema Comercial» remite a un curso de Taller de Casos I y el de informática contable a otro curso de Informática Aplicada a la Contabilidad, ambos con matrícula requerida. No se recuperó su contenido. Tampoco se presentan los videos como transcritos o revisados íntegramente. La introducción de la clase 5 contiene una aparente confusión entre administración y contabilidad, señalada sin modificar las definiciones existentes.
+
+El catálogo no contiene credenciales, cookies, calificaciones ni archivos entregados por el estudiante. La navegación a Materiales conserva y pausa una ronda activa como cualquier otra sección.
+
+Para verificar la integración en navegador: `node verify-materials.cjs`, con el mismo servidor y navegador de prueba descritos en `verify-browser.cjs`. Comprueba inventario, filtros reales, búsqueda, enlaces, ausencia de iframes, sesiones, recarga y ambos temas a 320, 390 y 1440 píxeles.
+
 Aplicación estática, sin backend ni dependencias externas. Para Netlify, publicar la carpeta que contiene `index.html`, sin comando de compilación. También puede abrirse directamente el HTML; para conservar el mismo almacenamiento conviene usar siempre el mismo sitio y navegador.
 
 ## Modalidades
