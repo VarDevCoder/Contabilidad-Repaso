@@ -1,0 +1,16 @@
+﻿const vm=require('node:vm'),fs=require('node:fs'),assert=require('node:assert/strict');
+const html=fs.readFileSync('index.html','utf8'),js=html.split('<script>')[1].split('</script>')[0];
+function boot(saved){const nodes={};const storage={};if(saved)storage['repaso-unibe-v1']=JSON.stringify(saved);const ctx={console,Date,Math,JSON,Number,String,Object,Array,Set,localStorage:{getItem:k=>storage[k]||null,setItem:(k,v)=>storage[k]=v},document:{getElementById:id=>nodes[id]||(nodes[id]={innerHTML:'',value:'20',insertAdjacentHTML(){}}),querySelectorAll:()=>[],querySelector:()=>({innerHTML:''})},window:{scrollTo(){},addEventListener(){}},setInterval:()=>1,clearInterval(){},confirm:()=>true};vm.createContext(ctx);vm.runInContext(js,ctx);return {run:s=>vm.runInContext(s,ctx),storage}}
+let b=boot({hist:{q01:{seen:3,right:2,wrong:1,lastCorrect:false}},sessions:[{time:1,score:50,total:10}]});
+assert.equal(b.run('QUESTIONS.length'),57);assert.equal(b.run('FLASH.length'),22);assert.equal(b.run('TOPICS.length'),5);assert.equal(b.run('state.hist.q01.seen'),3);
+assert.equal(b.run('new Set(shuffle(QUESTIONS.map(q=>q.id))).size'),57);
+b.run("beginQuiz('emergency',QUESTIONS)");assert.equal(b.run('state.quiz.ids.length'),20);assert.equal(b.run('new Set(state.quiz.ids).size'),20);
+assert.equal(b.run('TOPICS.every(t=>state.quiz.ids.filter(id=>QUESTIONS.find(q=>q.id===id).topic===t.id).length===4)'),true);
+b.run("state.quiz.chosen=2;save()");let b2=boot(JSON.parse(b.storage['repaso-unibe-v1']));assert.equal(b2.run('state.quiz.chosen'),2);assert.equal(b2.run('JSON.stringify(state.quiz.ids)'),b.run('JSON.stringify(state.quiz.ids)'));
+b.run("go('temario')");assert.equal(b.run('state.quiz.paused'),true);b.run('resumeSession()');assert.equal(b.run('state.quiz.paused'),false);
+b.run("state.quiz=null;state.screen='examen';startExam();state.exam.answers[state.exam.ids[0]]=QUESTIONS.find(q=>q.id===state.exam.ids[0]).answer;save()");const end=b.run('state.exam.end');b2=boot(JSON.parse(b.storage['repaso-unibe-v1']));assert.equal(b2.run('state.exam.end'),end);assert.equal(b2.run('Object.keys(state.exam.answers).length'),1);
+b.run('finishExam()');assert.equal(b.run('state.exam.omitted'),19);assert.equal(b.run('state.exam.right'),1);assert.equal(b.run('state.sessions.at(-1).score'),5);assert.equal(b.run('state.exam.ids.every(id=>state.hist[id].seen>0)'),true);const seen=b.run('Object.values(state.hist).reduce((s,h)=>s+h.seen,0)');b.run('finishExam()');assert.equal(b.run('Object.values(state.hist).reduce((s,h)=>s+h.seen,0)'),seen);
+b.run("state.exam=null;state.screen='examen';startExam();pauseSession();state.exam.end=1;updateTime()");assert.equal(b.run('state.exam.finished'),false);b.run('resumeSession()');assert.equal(b.run('state.exam.end>Date.now()'),true);b.run('state.exam.end=1;updateTime()');assert.equal(b.run('state.exam.finished'),true);
+assert.equal(b.run("conceptMatches('Información confiable, oportuna y verificable','confiable')"),true);assert.equal(b.run("conceptMatches('informal','formal')"),false);
+for(const s of ['home','temario','practica','flash','errores','examen','dashboard','emergencia','desarrollo'])b.run(`go('${s}')`);
+console.log('PASS: contenido, migración v1, Fisher-Yates, equilibrio adaptativo, emergencia, recarga, pausa, omisiones, resultados, idempotencia, vencimiento, conceptos y todos los modos.');
