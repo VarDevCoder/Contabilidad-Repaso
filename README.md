@@ -48,6 +48,10 @@ Se añadieron enlace para saltar al contenido, foco visible, foco en la pregunta
 
 Los iconos SVG de [Lucide](https://lucide.dev/) se incluyen directamente en [index.html](./index.html), junto con su licencia ISC/MIT. No requieren CDN ni paquetes en tiempo de ejecución.
 
+## Niveles de práctica
+
+La práctica, el repaso de emergencia y la recuperación de errores ofrecen dos niveles. En **Fácil**, cada pregunta va precedida por una *idea clave*: un resumen breve del concepto basado en el temario y la explicación de la pregunta, pensado para leer, memorizar y luego responder. En **Difícil** solo se muestran la pregunta y las opciones; la explicación aparece al corregir. El nivel elegido se recuerda en el navegador (`repaso-unibe-level`) y cada ronda guarda el suyo, visible en la barra de la sesión. El simulacro no cambia.
+
 ## Verificación
 
 Ejecutar `node verify.cjs` (Node.js, sin instalar paquetes). Comprueba contenido, compatibilidad del historial, selección equilibrada, persistencia, pausas, vencimiento, omisiones, resultados e idempotencia de la finalización. Usa un DOM mínimo para comprobar la lógica; no reemplaza las pruebas de navegador.

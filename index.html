@@ -120,6 +120,15 @@ body[data-screen="dashboard"] #root>.grid2{gap:8px 36px}body[data-screen="dashbo
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 
 .round-context{font-size:11px;color:var(--muted);margin:0 0 20px;letter-spacing:.02em}
+.learn-card{margin:26px 0 0;padding:18px 20px;background:var(--accent-bg);border-left:3px solid var(--a);border-radius:0 5px 5px 0}
+.learn-label{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--a2);letter-spacing:.02em}
+.learn-card p{margin:8px 0 0;font-size:15px;line-height:1.75;color:var(--text)}
+.learn-card+.question{margin-top:22px}
+.level-picker{margin-top:20px}
+.level-title{font-size:13px;font-weight:600;margin-bottom:8px}
+.level-picker .toolbar{margin:0}
+.level-detail{font-size:12px;line-height:1.65;color:var(--muted);margin:8px 0 0}
+@media(max-width:600px){.learn-card{padding:15px 14px}.learn-card p{font-size:14px}}
 </style></head>
 <body><a href="#root" class="skip-link">Saltar al contenido</a><div class="layout">
 <aside class="sidebar"><div class="brand"><div class="brandicon">◈</div><div><strong>Cuaderno de repaso</strong><small>CONTABILIDAD · UNIBE</small></div></div><div class="nav-group"><div class="eyebrow" style="margin:0 12px 12px">Espacio de estudio</div><div class="nav-list" id="nav" role="navigation" aria-label="Secciones de estudio"></div></div><div class="bottom"><strong>Guardado en este dispositivo</strong><p>Tu progreso queda en este navegador.</p></div></aside>
@@ -191,7 +200,7 @@ function temario(){return `${header('Temario de estudio','Resúmenes breves para
 function drawNotes(){const area=$('notes');if(!area)return;let s=state.search.toLocaleLowerCase().trim();let out=[];TOPICS.filter(t=>state.topic==='all'||t.id===state.topic).forEach(t=>{let sections=t.sections.filter(([a,b])=>!s||`${a} ${b} ${t.name}`.toLowerCase().includes(s));if(sections.length)out.push(`<div class="sectionline" style="margin-top:23px"><div><span class="pill">${t.name}</span><h2 style="margin-top:9px">${t.short}</h2></div></div>${sections.map(([a,b])=>`<div class="note"><h3>${a}</h3><p>${b}</p><div class="source" style="margin-top:13px">Fuente declarada: ${esc(t.source)} · Sección del resumen: ${esc(a)}. Documento original no incluido; página sin verificar.</div></div>`).join('')}`)});area.innerHTML=out.join('')||'<div class="empty">No se encontraron conceptos para esta búsqueda.</div>'}
 function shuffle(a){const out=[...a];for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]]}return out}
 function practice(){return `${header('Práctica','Preguntas de opción múltiple con explicación inmediata.')}${state.quiz?quizView():`<div class="columns"><div class="panel"><div class="eyebrow">ELEGÍ EL TEMA</div><div class="toolbar"><button class="tag ${state.topic==='all'?'on':''}" data-filter="all">Todos (${QUESTIONS.length})</button>${TOPICS.map(t=>`<button class="tag ${state.topic===t.id?'on':''}" data-filter="${t.id}">${t.name}</button>`).join('')}</div><div class="hint">Las preguntas salen mezcladas para que practiques sin memorizar el orden. Se explica cada respuesta al corregir.</div><div class="space"></div><button class="btn primary" id="startPractice">${icon('zap',17)} Iniciar práctica</button></div><div class="panel"><b>Tu rendimiento</b><div class="kv"><span class="muted">Preguntas disponibles</span><b>${QUESTIONS.filter(q=>state.topic==='all'||q.topic===state.topic).length}</b></div><div class="kv"><span class="muted">Acierto histórico</span><b>${accuracy()}%</b></div><div class="kv"><span class="muted">Pendientes de recuperación</span><b>${wrongIds().length}</b></div><p class="notice">Podés salir y volver a empezar cuando quieras.</p></div></div>`}`}
-function beginQuiz(which='practice',set=null){if(activeSession()){resumeSession();return}const pool=set||QUESTIONS.filter(q=>state.topic==='all'||q.topic===state.topic);if(!pool.length){go('errores');return}state.quiz={ids:adaptive(pool,which==='emergency'?Math.min(20,pool.length):pool.length),at:0,chosen:null,checked:false,right:0,wrong:0,which,answers:{}};state.screen='practica';render()}
+function beginQuiz(which='practice',set=null){if(activeSession()){resumeSession();return}const pool=set||QUESTIONS.filter(q=>state.topic==='all'||q.topic===state.topic);if(!pool.length){go('errores');return}state.quiz={ids:adaptive(pool,which==='emergency'?Math.min(20,pool.length):pool.length),at:0,chosen:null,checked:false,right:0,wrong:0,which,answers:{},level:studyLevel};state.screen='practica';render()}
 function quizView(){let qu=state.quiz; if(qu.at>=qu.ids.length){let total=qu.ids.length;return `<div class="panel" style="text-align:center;padding:42px 20px"><span class="eyebrow">SESIÓN FINALIZADA</span><div class="results">${Math.round(qu.right/total*100)}%</div><h2>Terminaste esta ronda</h2><p class="muted">${qu.right} correctas · ${qu.wrong} incorrectas · ${total} preguntas</p><div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px"><button class="btn primary" id="again">Otra ronda</button><button class="btn" data-route="errores">Revisar errores</button></div></div>`}
 let x=QUESTIONS.find(q=>q.id===qu.ids[qu.at]);return `<div class="columns"><div class="panel"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><span class="pill">${topic(x.topic).name}</span><span class="source">Pregunta ${qu.at+1} de ${qu.ids.length}</span></div><div class="progress" style="margin-top:14px"><div style="width:${(qu.at+1)/qu.ids.length*100}%"></div></div><h2 class="question">${esc(x.q)}</h2>${x.options.map((o,i)=>`<button class="answer ${qu.chosen===i?'selected':''} ${qu.checked&&i===x.answer?'correct':''} ${qu.checked&&qu.chosen===i&&i!==x.answer?'wrong':''}" data-answer="${i}" ${qu.checked?'disabled':''}><span class="letter">${'ABCD'[i]}</span><span>${esc(o)}</span></button>`).join('')}${qu.checked?`<div class="feedback ${qu.chosen!==x.answer?'bad':''}"><b>${qu.chosen===x.answer?'Respuesta correcta':'Respuesta incorrecta'}</b><p>${esc(x.why)}</p><div class="source" style="margin-top:7px">Fuente: ${esc(x.source)}</div></div>`:''}<div class="footer-actions"><button class="btn ghost small" id="leavePractice">Salir</button><button class="btn primary" id="checkOrNext" ${qu.chosen===null&&!qu.checked?'disabled':''}>${qu.checked?(qu.at===qu.ids.length-1?'Ver resultados':'Siguiente pregunta'):'Comprobar respuesta'} ${icon('arrow',16)}</button></div></div><div class="panel"><div class="eyebrow">SESIÓN ACTUAL</div><div class="kv"><span class="muted">Aciertos</span><b style="color:var(--green)">${qu.right}</b></div><div class="kv"><span class="muted">Errores</span><b style="color:var(--red)">${qu.wrong}</b></div><div class="kv"><span class="muted">Restantes</span><b>${qu.ids.length-qu.at-(qu.checked?1:0)}</b></div><p class="notice">Cada respuesta actualiza automáticamente tus estadísticas.</p></div></div>`}
 function errors(){let items=wrongIds();return `${header('Mis errores', 'Repasá solo lo que todavía cuesta. Una respuesta correcta aquí recupera el error.')}${items.length?`<div class="panel"><div class="kv"><div><b>${items.length} conceptos para reforzar</b><p class="muted smalltext" style="margin:3px 0">La práctica adaptativa empieza con tus respuestas incorrectas.</p></div><button class="btn primary" id="retryWrong">${icon('rotate',16)} Repasar errores</button></div>${items.map(q=>`<div class="listrow"><b>${esc(q.q)}</b><div class="source">${topic(q.topic).name} · ${esc(q.source)}${state.hist[q.id]?.lastOmitted?' · Omitida en el último simulacro':''}</div></div>`).join('')}</div>`:`<div class="panel empty">${icon('check',36)}<h2 style="color:var(--text)">Sin errores pendientes</h2><p>Cuando falles una pregunta, aparecerá acá hasta que la respondas correctamente.</p><button class="btn primary" data-route="practica">Ir a practicar</button></div>`}`}
@@ -759,5 +768,77 @@ bind=function(){
   if($('materialType'))$('materialType').onchange=e=>{materialFilters.type=e.target.value;redraw()};
 };
 
+// Niveles de práctica: el modo fácil muestra una idea clave antes de cada pregunta para favorecer la memorización.
+const LEARN={
+q01:'Una empresa es una organización que produce bienes o presta servicios que los consumidores demandan. Existe para satisfacer necesidades y, según el material, obtener un beneficio económico.',
+q02:'Para funcionar con rumbo, una empresa necesita misión (su propósito), objetivos (lo que busca lograr), estrategia, políticas y planificación.',
+q03:'En la época primitiva los grupos humanos se organizaban para subsistir: cazaban, pescaban y recolectaban alimentos.',
+q04:'La primera forma de repartir el trabajo fue la división por edad y sexo: cada integrante del grupo cumplía tareas según esas características.',
+q05:'En las grandes civilizaciones, como Egipto, aparecen el control del trabajo y la organización de recursos. Obras como las pirámides exigían coordinar y supervisar a muchas personas.',
+q06:'En la Antigüedad grecolatina el trabajo se organizaba de forma coercitiva: se sostenía en el esclavismo y en una supervisión estricta.',
+q07:'En la Edad Media, con el feudalismo, se producía en talleres artesanales donde trabajaban maestros, oficiales y aprendices. Los artesanos de un mismo oficio se agruparon en gremios.',
+q08:'Los gremios medievales agrupaban a trabajadores de un mismo oficio. El material los considera antecedentes de los sindicatos actuales, así como los talleres son antecedentes de la empresa.',
+q09:'En la Edad Moderna se contrata a campesinos a cambio de un salario y crece el comercio: es la etapa del trabajo asalariado y del capitalismo comercial.',
+q10:'La Revolución Industrial trajo la mecanización: las máquinas permitieron expandir grandes fábricas y producir en serie, transformando los procesos productivos.',
+q11:'En el siglo XX el avance industrial obligó a coordinar organizaciones cada vez más complejas, y la administración se consolidó como disciplina para lograr mayor eficiencia.',
+q12:'Las empresas del siglo XXI se caracterizan por la globalización, la automatización, la calidad, la competitividad y la orientación al cliente.',
+q13:'Henri Fayol definió administrar con cinco verbos: prever, organizar, dirigir, coordinar y controlar.',
+q14:'José Antonio Fernández Arena ve la administración como una ciencia social que persigue objetivos institucionales mediante una estructura y el esfuerzo humano coordinado.',
+q15:'Agustín Reyes Ponce define la administración como un conjunto sistemático de reglas para lograr la máxima eficiencia en la estructura y el manejo de un organismo social.',
+q16:'George R. Terry presenta la administración como un proceso de cuatro actividades: planeación, organización, ejecución y control.',
+q17:'Universalidad: la administración existe dondequiera que haya un organismo social, sea el Estado, una empresa, el ejército u otra organización.',
+q18:'Especificidad: la administración tiene identidad propia y se distingue de los fenómenos técnicos, productivos, jurídicos o contables, aunque conviva con ellos.',
+q19:'Unidad temporal: las fases de la administración (planear, organizar, dirigir y controlar) no ocurren aisladas una tras otra; pueden darse al mismo tiempo.',
+q20:'Unidad jerárquica: todos los niveles de jefatura, del más alto al más bajo, forman parte de un mismo cuerpo administrativo.',
+q21:'En una pyme, mejorar la administración ayuda a coordinar sus recursos y a competir con organizaciones más grandes. En las grandes, administrar es indispensable por su complejidad.',
+q22:'Una buena administración coordina recursos humanos y materiales, eleva la productividad y contribuye a la eficacia de la organización.',
+q23:'La diferencia entre administración pública y privada depende del tipo de organismo: la pública se ocupa de organismos de orden público y la privada de organismos privados.',
+q24:'Según el artículo, la administración surge cuando las personas empiezan a cooperar y a trabajar de forma organizada en sociedad.',
+q25:'Para la OIT, formalizar una empresa es incorporarla a la economía formal.',
+q26:'La formalización abarca varias dimensiones: registro y licencias ante las autoridades, seguridad social y cumplimiento de las normas tributarias y laborales.',
+q27:'La formalización es una incorporación gradual a la economía formal: una empresa puede ir formalizando distintos aspectos en distintos momentos, no necesariamente todo de una vez.',
+q28:'Al promover la formalización, la OIT busca crear más y mejores empleos, reducir la pobreza y la vulnerabilidad y mejorar las condiciones de trabajo.',
+q29:'Formalizarse puede facilitar a la empresa el acceso a financiación, a mercados y a licitaciones, y reducir su exposición a sanciones.',
+q30:'Para la sociedad, más empresas formales pueden ampliar los ingresos fiscales que financian bienes y servicios públicos, y favorecer la competencia leal.',
+q31:'La OIT propone simplificar trámites, reducir costos y obstáculos para registrarse y cumplir, ofrecer incentivos y facilitar el acceso a servicios.',
+q32:'Sobre la transición hacia la economía formal, el documento cita la Recomendación núm. 204 de la OIT y la meta 8.3 de los ODS.',
+q33:'El modelo de intervención de la OIT lleva a un resultado final: más empleo de calidad, menor vulnerabilidad y mayor cohesión social.',
+q34:'Las empresas informales que no cumplen sus obligaciones compiten con ventaja. La formalización busca reducir esa competencia desleal frente a las empresas que sí cumplen.',
+q35:'La contabilidad registra, clasifica y resume operaciones económicas. Registrar es dejar constancia; clasificar, agrupar; resumir, convertirlas en información útil.',
+q36:'La contabilidad produce información sobre dos cosas: la situación patrimonial de la empresa y sus resultados.',
+q37:'La contabilidad no sirve solo para cumplir obligaciones tributarias: es una herramienta de gestión para tomar decisiones fundamentadas.',
+q38:'La información contable debe ser confiable (se puede creer), oportuna (llega a tiempo) y verificable (se puede comprobar).',
+q39:'Los informes contables los usan distintos interesados: directivos, inversionistas, proveedores y entidades públicas, entre otros.',
+q40:'El profesional contable tiene una responsabilidad ética y técnica: proteger la calidad, transparencia y exactitud de los datos con rigor y orden.',
+q41:'La tarea describe a la empresa como una unidad económico-social que combina recursos humanos, materiales, técnicos y financieros.',
+q42:'Según la tarea, la competencia entre empresas impulsa la mejora continua en calidad, precio y servicio.',
+q43:'La tarea cierra presentando la contabilidad como el lenguaje de los negocios: una herramienta de gestión para administrar con transparencia.',
+q44:'Un software contable es un programa computarizado que centraliza e integra la información financiera y facilita las operaciones contables.',
+q45:'Un software contable registra compras, ventas, inventarios y cuentas por cobrar, y con esos datos genera informes, balances y estados financieros.',
+q46:'Objetivos del software contable: seguimiento diario, procesos ágiles, centralización de la información y datos oportunos.',
+q47:'Automatizar la contabilidad reduce el papeleo, el tiempo invertido y los errores, y mejora el acceso a información para decidir.',
+q48:'El software ayuda pero no reemplaza al contador: el profesional sigue siendo necesario para supervisar y verificar la calidad de los registros.',
+q49:'Para elegir un software contable hay que considerar costos, necesidades de la empresa, capacitación, soporte, actualización y seguridad.',
+q50:'Características esenciales: fácil manejo, actualización y soporte, informes, flexibilidad, capacidad de almacenamiento, seguridad por permisos y unificación de procesos.',
+q51:'La seguridad de un software contable se apoya en claves y permisos de usuario, que restringen el acceso a los datos confidenciales.',
+q52:'La flexibilidad permite que el sistema se adapte a cambios en el plan contable y en las operaciones a medida que la empresa crece.',
+q53:'Un ERP (planificación empresarial) integra en un solo sistema varios departamentos: producción, distribución, administración y contabilidad.',
+q54:'El software contable online guarda la información en internet: se accede por la web, a veces con apps móviles, sin requerir necesariamente una instalación local.',
+q55:'Una hoja de cálculo básica puede carecer de integración entre operaciones y de controles contables, por eso es más propensa a errores manuales.',
+q56:'Generar informes permite obtener reportes de ventas, costos, inventario y otros datos para monitorear las operaciones por períodos o en tiempo real.',
+q57:'El software personalizado se hace a medida, pero puede requerir una inversión considerable y soporte especializado.'};
+const LEVELS={easy:{name:'Fácil',detail:'Antes de cada pregunta leés una idea clave para fijar el concepto.'},hard:{name:'Difícil',detail:'Solo la pregunta y las opciones, sin ayudas previas. La explicación aparece al corregir.'}};
+let studyLevel='easy';
+try{studyLevel=localStorage.getItem('repaso-unibe-level')==='hard'?'hard':'easy'}catch(e){}
+const quizLevel=q=>q?.level==='hard'?'hard':'easy';
+const levelPicker=()=>`<div class="level-picker"><div class="level-title">Nivel de práctica</div><div class="toolbar" role="group" aria-label="Nivel de práctica">${Object.entries(LEVELS).map(([id,l])=>`<button class="tag ${studyLevel===id?'on':''}" data-level="${id}" aria-pressed="${studyLevel===id}">${l.name}</button>`).join('')}</div><p class="level-detail">${LEVELS[studyLevel].detail}</p></div>`;
+const levelPractice=practice,levelEmergency=emergency,levelQuizView=quizView;
+practice=function(){const html=levelPractice();return state.quiz?html:html.replace('<div class="space"></div><button class="btn primary" id="startPractice">',levelPicker()+'<div class="space"></div><button class="btn primary" id="startPractice">')};
+emergency=function(){return levelEmergency().replace('<button class="btn primary" id="startEmergency">',levelPicker()+'<button class="btn primary" id="startEmergency">')};
+quizView=function(){const q=state.quiz,html=levelQuizView();if(q.at>=q.ids.length||quizLevel(q)==='hard')return html;const id=q.ids[q.at];if(!LEARN[id])return html;return html.replace('<h2 class="question">',`<aside class="learn-card" aria-label="Idea clave"><span class="learn-label">${icon('book',15)} Idea clave · leé y después respondé</span><p>${esc(LEARN[id])}</p></aside><h2 class="question">`)};
+const levelBind=bind;
+bind=function(){levelBind();document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>{studyLevel=b.dataset.level==='hard'?'hard':'easy';try{localStorage.setItem('repaso-unibe-level',studyLevel)}catch(e){}render()})};
+const levelRender=render;
+render=function(){levelRender();if(!document.body)return;const a=activeSession(),label=root.querySelector('.session-bar strong');if(a?.kind==='quiz'&&label)label.insertAdjacentHTML('afterend',` · Modo ${LEVELS[quizLevel(a.value)].name.toLowerCase()}`)};
 render();
 </script></body></html>
